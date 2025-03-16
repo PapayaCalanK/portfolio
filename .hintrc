@@ -1,0 +1,27 @@
+{
+  "extends": ["development"],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": ["backdrop-filter"]
+      }
+    ],
+    "axe/text-alternatives": [
+      "default",
+      {
+        "frame-title": "off",
+        "document-title": "off"
+      }
+    ],
+    "meta-viewport": "off",
+    "axe/name-role-value": [
+      "default",
+      {
+        "button-name": "off",
+        "link-name": "off"
+      }
+    ],
+    "disown-opener": "off"
+  }
+}

@@ -1,39 +1,287 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio BTS SIO - Accueil</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Portfolio MB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages/accueil.css">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="about.html">À propos</a></li>
-                <li><a href="bts.html">BTS SIO</a></li>
-                <li><a href="projects.html">Projets PPE</a></li>
-                <li><a href="veille.html">Veille Technologique</a></li>
-                <li><a href="patrimoine.html">Patrimoine Informatique</a></li>
-                <li><a href="competences.html">Compétences</a></li>
-                <li><a href="contact.html">Contact</a></li>
+    <div class="app-container">
+        <nav class="nav-bar">
+            <div class="nav-logo" id="home-link">MB</div>
+            <ul class="nav-links">
+                <li><a href="#profil" class="nav-link">Profil</a></li>
+                <li><a href="#Parcours" class="nav-link">Parcours</a></li>
+                <li><a href="#projets" class="nav-link">Projets</a></li>
+                <li><a href="#réalisations" class="nav-link">Réalisations</a></li>
+                <li><a href="#Veille" class="nav-link">Veille</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
         </nav>
-    </header>
 
-    <main>
-        <section>
-            <h1>Bienvenue sur mon Portfolio BTS SIO</h1>
-            <p>Découvrez mon parcours, mes projets et mes compétences.</p>
-        </section>
-    </main>
+        <main class="content-area">
+            <!-- Page d'accueil -->
+            <div id="home-content" class="page-content">
+                <div class="animated-background">
+                    <div class="gradient-sphere sphere-1"></div>
+                    <div class="gradient-sphere sphere-2"></div>
+                    <div class="gradient-sphere sphere-3"></div>
+                </div>
 
-    <footer>
-        <p>© 2025 PapayaCalanK - Tous droits réservés.</p>
-    </footer>
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <div class="greeting">Bienvenue sur mon portfolio</div>
+                        <div class="name">Myriem Baaziz</div>
+                        <div id="typed-text"></div>
+                        
+                        <div class="description">
+                            Passionnée par le développement web et les nouvelles technologies, 
+                            je crée des solutions numériques innovantes et élégantes.
+                        </div>
 
-    <!-- Inclusion du JavaScript -->
-    <script src="js/script.js"></script>
+            </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page profil -->
+            <div id="profil-content" class="page-content" style="display: none;">
+                <div class="profile-container">
+                    <div class="profile-header">
+                        <h1>À propos de moi</h1>
+                        <p class="subtitle">Développeuse Web Full Stack</p>
+                    </div>
+
+                    <div class="profile-content">
+                        <div class="text-section">
+                            <p>
+                                Actuellement en BTS SIO option SLAM, je me passionne pour le 
+                                développement web et la création d'applications innovantes. 
+                                Mon parcours m'a permis d'acquérir une solide base en programmation 
+                                et en gestion de projets.
+                            </p>
+                            <p>
+                                Je m'investis pleinement dans chaque projet, en apportant 
+                                créativité et rigueur technique pour développer des solutions 
+                                adaptées aux besoins.
+                            </p>
+                        </div>
+
+                        <!-- Boutons néon -->
+                        <div class="neon-buttons">
+                            <a href="assets/cv.pdf" class="neon-btn" download>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <i class="fas fa-file-pdf"></i>
+                                Télécharger mon CV
+                            </a>
+                            <a href="assets/tableau-synthese.pdf" class="neon-btn" download>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <i class="fas fa-table"></i>
+                                Tableau de synthèse
+                            </a>
+                        </div>
+
+                        <!-- Section BTS SIO -->
+                        <div class="bts-section">
+                            <h2>Formation BTS SIO</h2>
+                            <div class="modern-cards">
+                                <div class="modern-card slam">
+                                    <div class="card-content">
+                                        <div class="card-icon">
+                                            <i class="fas fa-code"></i>
+                                        </div>
+                                        <h3>SLAM</h3>
+                                        <p class="card-subtitle">Solutions Logicielles et Applications Métiers</p>
+                                        <ul class="card-details">
+                                            <li><i class="fas fa-check"></i> Développement d'applications</li>
+                                            <li><i class="fas fa-check"></i> Programmation orientée objet</li>
+                                            <li><i class="fas fa-check"></i> Bases de données</li>
+                                            <li><i class="fas fa-check"></i> Applications web et mobiles</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-blur"></div>
+                                </div>
+                                
+                                <div class="modern-card sisr">
+                                    <div class="card-content">
+                                        <div class="card-icon">
+                                            <i class="fas fa-network-wired"></i>
+                                        </div>
+                                        <h3>SISR</h3>
+                                        <p class="card-subtitle">Solutions d'Infrastructure, Systèmes et Réseaux</p>
+                                        <ul class="card-details">
+                                            <li><i class="fas fa-check"></i> Administration réseau</li>
+                                            <li><i class="fas fa-check"></i> Cybersécurité</li>
+                                            <li><i class="fas fa-check"></i> Virtualisation</li>
+                                            <li><i class="fas fa-check"></i> Services système et réseau</li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-blur"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section Compétences -->
+                        <div class="skills-section">
+                            <h2>Compétences en Développement</h2>
+                            <div class="skills-grid">
+                                <div class="skill-category">
+                                    <h3>Front-end</h3>
+                                    <div class="skill-items">
+                                        <div class="skill-item">
+                                            <i class="fab fa-html5"></i>
+                                            <span>HTML5</span>
+                                        </div>
+                                        <div class="skill-item">
+                                            <i class="fab fa-css3-alt"></i>
+                                            <span>CSS3</span>
+                                        </div>
+                                        <div class="skill-item">
+                                            <i class="fab fa-js"></i>
+                                            <span>JavaScript</span>
+                                        </div>
+                                        <div class="skill-item">
+                                            <i class="fab fa-react"></i>
+                                            <span>React</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-category">
+                                    <h3>Back-end</h3>
+                                    <div class="skill-items">
+                                        <div class="skill-item">
+                                            <i class="fab fa-php"></i>
+                                            <span>PHP</span>
+                                        </div>
+                                        <div class="skill-item">
+                                            <i class="fab fa-python"></i>
+                                            <span>Python</span>
+                                        </div>
+                                        <div class="skill-item">
+                                            <i class="fas fa-database"></i>
+                                            <span>MySQL</span>
+                                        </div>
+                                        <div class="skill-item">
+                                            <i class="fas fa-moon"></i>
+                                            <span>Lua</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section Outils -->
+                        <div class="tools-section">
+                            <h2>Outils & Environnements</h2>
+                            <div class="tools-grid">
+                                <div class="tool-category">
+                                    <h3>Développement</h3>
+                                    <div class="tool-items">
+                                        <div class="tool-item">
+                                            <i class="fab fa-github"></i>
+                                            <span>GitHub</span>
+                                        </div>
+                                        <div class="tool-item">
+                                            <i class="fab fa-git-alt"></i>
+                                            <span>Git</span>
+                                        </div>
+                                        <div class="tool-item">
+                                            <i class="fab fa-visual-studio-code"></i>
+                                            <span>VS Code</span>
+                                        </div>
+                                        <div class="tool-item">
+                                            <i class="fab fa-docker"></i>
+                                            <span>Docker</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tool-category">
+                                    <h3>Design & Productivité</h3>
+                                    <div class="tool-items">
+                                        <div class="tool-item">
+                                            <i class="fab fa-figma"></i>
+                                            <span>Figma</span>
+                                        </div>
+                                        <div class="tool-item">
+                                            <i class="fas fa-tasks"></i>
+                                            <span>Trello</span>
+                                        </div>
+                                        <div class="tool-item">
+                                            <i class="fas fa-terminal"></i>
+                                            <span>Terminal</span>
+                                        </div>
+                                        <div class="tool-item">
+                                            <i class="fas fa-database"></i>
+                                            <span>phpMyAdmin</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+    <script src="script.js"></script>
+    <script>
+        // Effet de typing
+        const roles = [
+            'Développeuse Full Stack',
+            'Étudiante BTS SIO SLAM',
+            'Passionnée de Développement Web'
+        ];
+        
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typedText = document.getElementById('typed-text');
+        
+        function typeEffect() {
+            const currentRole = roles[roleIndex];
+            
+            if (isDeleting) {
+                typedText.textContent = currentRole.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typedText.textContent = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            let typeSpeed = isDeleting ? 50 : 100;
+            
+            if (!isDeleting && charIndex === currentRole.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                typeSpeed = 500;
+            }
+            
+            setTimeout(typeEffect, typeSpeed);
+        }
+        
+        typeEffect();
+    </script>
 </body>
+
 </html>

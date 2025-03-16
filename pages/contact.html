@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Myriem Baaziz</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../profil.css" />
+    <style>
+      .page-content {
+        padding: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        gap: 3rem;
+      }
+
+      .contact-left {
+        flex: 1;
+        padding-top: 1rem;
+      }
+
+      .section-title {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        color: var(--text-color);
+      }
+
+      .contact-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .contact-card {
+        padding: 1rem;
+        background: var(--card-bg);
+        border-radius: 12px;
+        border: 1px solid rgba(93, 79, 255, 0.2);
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .contact-card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(93, 79, 255, 0.4);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-icon {
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background: rgba(93, 79, 255, 0.1);
+        font-size: 1rem;
+        color: var(--text-color);
+      }
+
+      .contact-info h3 {
+        font-size: 1rem;
+        margin-bottom: 0.2rem;
+        color: var(--text-color);
+      }
+
+      .contact-info p,
+      .contact-info a {
+        color: var(--text-color);
+        opacity: 0.8;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: opacity 0.3s ease;
+      }
+
+      .contact-info a:hover {
+        opacity: 1;
+      }
+
+      .contact-right {
+        flex: 1.2;
+        background: var(--card-bg);
+        border-radius: 12px;
+        padding: 1.5rem;
+        border: 1px solid rgba(93, 79, 255, 0.2);
+      }
+
+      .form-group {
+        margin-bottom: 1rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: var(--text-color);
+        font-size: 0.9rem;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.8rem;
+        background: var(--bg-color);
+        border: 1px solid rgba(93, 79, 255, 0.2);
+        border-radius: 8px;
+        color: var(--text-color);
+        font-size: 0.9rem;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: rgba(93, 79, 255, 0.4);
+        box-shadow: 0 0 0 3px rgba(93, 79, 255, 0.1);
+      }
+
+      .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .submit-btn {
+        width: 100%;
+        padding: 0.8rem;
+        background: rgba(93, 79, 255, 0.1);
+        border: 1px solid rgba(93, 79, 255, 0.3);
+        border-radius: 8px;
+        color: var(--text-color);
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .submit-btn:hover {
+        background: rgba(93, 79, 255, 0.2);
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 768px) {
+        .page-content {
+          flex-direction: column;
+          gap: 2rem;
+        }
+
+        .section-title {
+          font-size: 2.5rem;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-content">
+      <div class="contact-left">
+        <h1 class="section-title">Me Contacter</h1>
+
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-info">
+              <h3>Email</h3>
+              <a href="mailto:myriem.baaziz11@gmail.com"
+                >myriem.baaziz11@gmail.com</a
+              >
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <div class="contact-info">
+              <h3>LinkedIn</h3>
+              <a href="#" target="_blank">Myriem Baaziz</a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <div class="contact-info">
+              <h3>GitHub</h3>
+              <a href="#" target="_blank">@MyriemB</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <form>
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Envoyer</button>
+        </form>
+      </div>
+    </div>
+    <script src="../script.js"></script>
+  </body>
+</html>
