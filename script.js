@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!contentArea) return;
 
     try {
-      const response = await fetch(`pages/${pagePath}.html`);
+      const response = await fetch(`${pagePath}.html`);
+
       if (!response.ok) throw new Error("Échec du chargement de la page");
       const content = await response.text();
       contentArea.innerHTML = content;
