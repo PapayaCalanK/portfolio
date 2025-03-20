@@ -3,430 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Veille Technologique</title>
+    <title>Veille Technologique - APIs et Présentation d'entreprise</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <style>
-      :root {
-        --bg-primary: #0f0f0f;
-        --bg-secondary: rgba(29, 29, 31, 0.8);
-        --text-primary: #ffffff;
-        --text-secondary: #a0a0a0;
-        --accent-primary: #a29bfe;
-        --accent-secondary: #6c5ce7;
-        --accent-gradient: linear-gradient(135deg, #6c5ce7, #a29bfe);
-        --border-radius: 16px;
-      }
-
-      .veille-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2rem;
-      }
-
-      .veille-header {
-        margin-bottom: 3rem;
-        text-align: center;
-      }
-
-      .veille-title {
-        font-size: 2.5rem;
-        color: var(--text-primary);
-        margin-bottom: 1rem;
-        background: var(--accent-gradient);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-
-      .veille-description {
-        color: var(--text-secondary);
-        font-size: 1.1rem;
-        line-height: 1.6;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .tools-section {
-        background: var(--bg-secondary);
-        border-radius: var(--border-radius);
-        padding: 2rem;
-        margin-bottom: 3rem;
-      }
-
-      .tools-title {
-        font-size: 1.5rem;
-        color: var(--text-primary);
-        margin-bottom: 1rem;
-      }
-
-      .tool-card {
-        background: var(--bg-primary);
-        border-radius: var(--border-radius);
-        padding: 1.5rem;
-        margin-bottom: 1rem;
-      }
-
-      .tool-name {
-        color: var(--accent-primary);
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .tool-description {
-        color: var(--text-secondary);
-        font-size: 0.95rem;
-        line-height: 1.6;
-      }
-
-      .articles-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
-      }
-
-      .article-card {
-        background: var(--bg-secondary);
-        border-radius: var(--border-radius);
-        padding: 1.5rem;
-        transition: transform 0.3s ease;
-      }
-
-      .article-card:hover {
-        transform: translateY(-5px);
-      }
-
-      .article-date {
-        color: var(--accent-primary);
-        font-size: 0.9rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .article-title {
-        color: var(--text-primary);
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-      }
-
-      .article-source {
-        color: var(--text-secondary);
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-      }
-
-      .article-link {
-        color: var(--accent-primary);
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      .article-link:hover {
-        text-decoration: underline;
-      }
-
-      @media (max-width: 768px) {
-        .veille-container {
-          padding: 1rem;
-        }
-
-        .veille-title {
-          font-size: 2rem;
-        }
-      }
-
-      .methodology-section {
-        background: var(--bg-secondary);
-        border-radius: var(--border-radius);
-        padding: 2rem;
-        margin-bottom: 3rem;
-      }
-
-      .methodology-title {
-        font-size: 1.5rem;
-        color: var(--text-primary);
-        margin-bottom: 1rem;
-      }
-
-      .methodology-content {
-        color: var(--text-secondary);
-        font-size: 1rem;
-        line-height: 1.6;
-      }
-
-      .keywords-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-top: 1rem;
-      }
-
-      .keyword {
-        background: var(--bg-primary);
-        color: var(--accent-primary);
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
-        font-size: 0.9rem;
-      }
-
-      .analysis-section {
-        background: var(--bg-secondary);
-        border-radius: var(--border-radius);
-        padding: 2rem;
-        margin-top: 3rem;
-      }
-
-      .analysis-title {
-        font-size: 1.5rem;
-        color: var(--text-primary);
-        margin-bottom: 1rem;
-      }
-
-      .analysis-content {
-        color: var(--text-secondary);
-        font-size: 1rem;
-        line-height: 1.6;
-      }
-
-      .tools-showcase {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        margin-bottom: 3rem;
-      }
-
-      .google-alerts-demo,
-      .presentation-section {
-        background: var(--bg-secondary);
-        border-radius: var(--border-radius);
-        padding: 2rem;
-      }
-
-      .section-title {
-        font-size: 1.5rem;
-        color: var(--text-primary);
-        margin-bottom: 1.5rem;
-      }
-
-      .screenshot-container {
-        position: relative;
-        border-radius: var(--border-radius);
-        overflow: hidden;
-      }
-
-      .google-alerts-img {
-        width: 100%;
-        height: auto;
-        border-radius: var(--border-radius);
-        border: 1px solid var(--border-color);
-      }
-
-      .screenshot-caption {
-        color: var(--text-secondary);
-        font-size: 0.9rem;
-        margin-top: 1rem;
-        text-align: center;
-      }
-
-      .presentation-container {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-        padding: 1.5rem;
-        background: var(--bg-primary);
-        border-radius: var(--border-radius);
-        border: 1px solid var(--border-color);
-      }
-
-      .presentation-icon {
-        font-size: 3rem;
-        color: var(--accent-primary);
-      }
-
-      .presentation-info {
-        flex: 1;
-      }
-
-      .presentation-info h3 {
-        color: var(--text-primary);
-        margin-bottom: 0.5rem;
-      }
-
-      .presentation-info p {
-        color: var(--text-secondary);
-        font-size: 0.95rem;
-        margin-bottom: 1rem;
-      }
-
-      .download-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        background: var(--accent-gradient);
-        color: white;
-        padding: 0.8rem 1.5rem;
-        border-radius: 25px;
-        text-decoration: none;
-        font-size: 0.9rem;
-        transition: transform 0.3s ease;
-      }
-
-      .download-btn:hover {
-        transform: translateY(-2px);
-      }
-
-      @media (max-width: 768px) {
-        .tools-showcase {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="../style.css" />
   </head>
+
   <body>
-    <div class="veille-container">
-      <div class="veille-header">
-        <h1 class="veille-title">
-          L'Intelligence Artificielle au Service de la Santé
-        </h1>
-        <p class="veille-description">
-          L'IA révolutionne le développement des médicaments en transformant
-          radicalement les processus de recherche et de développement dans
-          l'industrie pharmaceutique.
-        </p>
+    <div
+      class="veille-container"
+      style="padding: 2rem; max-width: 1200px; margin: auto"
+    >
+      <h1
+        style="
+          font-size: 2.5rem;
+          background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+          -webkit-background-clip: text;
+          background-clip: text; /* ✅ Ajouté pour la compatibilité */
+          color: transparent;
+          text-align: center;
+        "
+      >
+        Veille Technologique : Les API et Présentation en Entreprise
+      </h1>
+
+      <p
+        style="
+          color: #a0a0a0;
+          text-align: center;
+          font-size: 1.1rem;
+          margin: 2rem 0;
+        "
+      >
+        Retrouvez ci-dessous mes supports de présentation pour l'oral :
+      </p>
+
+      <!-- Lien vers la veille sur les API -->
+      <div style="margin-bottom: 3rem; text-align: center">
+        <a
+          href="https://gamma.app/docs/putd9z7n4mboroy"
+          target="_blank"
+          style="
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+          "
+        >
+          📄 Voir la Veille Technologique sur les API
+        </a>
       </div>
 
-      <div class="methodology-section">
-        <h2 class="methodology-title">Méthodologie de Veille</h2>
-        <div class="methodology-content">
-          <p>
-            Ma veille technologique s'appuie sur plusieurs outils et méthodes :
-          </p>
-          <ul>
-            <li>Google Alerts pour le suivi quotidien des actualités</li>
-            <li>Suivi des publications scientifiques majeures</li>
-            <li>Veille sur les réseaux sociaux professionnels</li>
-          </ul>
-          <div class="keywords-list">
-            <span class="keyword">AI drug development</span>
-            <span class="keyword">IA santé innovation</span>
-            <span class="keyword">Intelligence artificielle médicaments</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="tools-showcase">
-        <div class="google-alerts-demo">
-          <h2 class="section-title">Configuration Google Alerts</h2>
-          <div class="screenshot-container">
-            <img
-              src="../images/googlealert.png"
-              alt="Configuration Google Alerts"
-              class="google-alerts-img"
-            />
-            <div class="screenshot-caption">
-              Exemple de ma configuration Google Alerts pour suivre l'actualité
-              de l'IA dans la santé
-            </div>
-          </div>
-        </div>
-
-        <div class="presentation-section">
-          <h2 class="section-title">Présentation Détaillée</h2>
-          <div class="presentation-container">
-            <i class="fas fa-file-powerpoint presentation-icon"></i>
-            <div class="presentation-info">
-              <h3>Présentation PowerPoint</h3>
-              <p>
-                Analyse approfondie de l'impact de l'IA dans le développement
-                des médicaments
-              </p>
-              <a href="path/to/presentation.pptx" class="download-btn" download>
-                <i class="fas fa-download"></i> Télécharger la présentation
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="articles-grid">
-        <!-- Article 1 -->
-        <div class="article-card">
-          <div class="article-date">15 Mars 2024</div>
-          <h3 class="article-title">
-            DeepMind révolutionne la découverte de médicaments
-          </h3>
-          <div class="article-source">Source: Nature</div>
-          <p class="article-summary">
-            AlphaFold permet de prédire la structure des protéines avec une
-            précision inégalée, accélérant considérablement le développement de
-            nouveaux médicaments.
-          </p>
-          <a href="#" class="article-link">
-            Lire l'article <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
-
-        <!-- Article 2 -->
-        <div class="article-card">
-          <div class="article-date">10 Mars 2024</div>
-          <h3 class="article-title">L'IA dans le traitement du cancer</h3>
-          <div class="article-source">Source: Science Daily</div>
-          <p class="article-summary">
-            Les algorithmes d'IA permettent d'identifier de nouvelles cibles
-            thérapeutiques pour les traitements anticancéreux.
-          </p>
-          <a href="#" class="article-link">
-            Lire l'article <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
-
-        <!-- Article 3 -->
-        <div class="article-card">
-          <div class="article-date">5 Mars 2024</div>
-          <h3 class="article-title">Nouveau médicament créé par IA</h3>
-          <div class="article-source">Source: Le Monde</div>
-          <p class="article-summary">
-            Premier médicament entièrement conçu par intelligence artificielle
-            entrant en phase d'essais cliniques.
-          </p>
-          <a href="#" class="article-link">
-            Lire l'article <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="analysis-section">
-        <h2 class="analysis-title">Analyse et Impact</h2>
-        <div class="analysis-content">
-          <p>
-            L'utilisation de l'IA dans le développement des médicaments
-            représente une avancée majeure pour plusieurs raisons :
-          </p>
-          <ul>
-            <li>
-              Réduction significative du temps de développement des médicaments
-            </li>
-            <li>Diminution des coûts de recherche et développement</li>
-            <li>
-              Amélioration de la précision dans la découverte de molécules
-            </li>
-            <li>Personnalisation accrue des traitements</li>
-          </ul>
-          <p>
-            Cette révolution technologique s'inscrit parfaitement dans les
-            enjeux du secteur de la santé numérique, un domaine en pleine
-            expansion qui nécessite des compétences en développement
-            informatique.
-          </p>
-        </div>
+      <!-- Lien vers la présentation d'entreprise -->
+      <div style="text-align: center">
+        <a
+          href="https://gamma.app/docs/564bd6coc5feakr"
+          target="_blank"
+          style="
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+          "
+        >
+          🏢 Voir la Présentation de l'Entreprise
+        </a>
       </div>
     </div>
   </body>
