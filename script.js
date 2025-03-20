@@ -10,11 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  async function loadContent(page) {
+  async function loadContent(pagePath) {
     if (!contentArea) return;
 
     try {
-      const response = await fetch(`pages/${page}.html`);
+      const response = await fetch(`${pagePath}.html`);
       if (!response.ok) throw new Error("Échec du chargement de la page");
       const content = await response.text();
       contentArea.innerHTML = content;
@@ -27,13 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
   navLinks.forEach((link) => {
     link.addEventListener("click", async (e) => {
       e.preventDefault();
-
-      const target = e.target instanceof HTMLElement ? e.target : null; // 🔥 Correction définitive !
+      const target = e.target instanceof HTMLElement ? e.target : null;
       if (!target) return;
 
-      const page = target.getAttribute("href")?.substring(1);
-      if (page) {
-        await loadContent(page);
+      const pagePath = target.getAttribute("href");
+      if (pagePath) {
+        await loadContent(pagePath);
         navLinks.forEach((l) => l.classList.remove("active"));
         target.classList.add("active");
       }
@@ -41,16 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   homeLink.addEventListener("click", async () => {
-    if (!contentArea) return;
-    await loadContent("accueil");
+    await loadContent("pages/accueil");
     navLinks.forEach((link) => link.classList.remove("active"));
-  });
-
-  const skillLevels = document.querySelectorAll(".skill-level");
-  skillLevels.forEach((skill) => {
-    if (skill instanceof HTMLElement) {
-      const level = skill.getAttribute("data-level");
-      if (level) skill.style.setProperty("--width", `${level}%`);
-    }
   });
 });
