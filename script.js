@@ -42,9 +42,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   homeLink.addEventListener("click", async () => {
-    await loadContent("accueil");
+    await loadContent("pages/accueil");
     navLinks.forEach((link) => link.classList.remove("active"));
   });
+
+  // Charger la page d'accueil par défaut
+  loadContent("pages/accueil");
 
   // Charger la page d'accueil par défaut
   loadContent("accueil");
