@@ -117,6 +117,24 @@
         transform: translateY(-2px);
       }
 
+      /* Style du bouton PPE */
+      .ppe-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+        color: #fff;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+        margin-top: 3rem;
+      }
+
+      .ppe-button:hover {
+        transform: translateY(-3px);
+      }
+
       @media (max-width: 768px) {
         .project-card {
           padding: 1.5rem;
@@ -133,10 +151,13 @@
       }
     </style>
   </head>
+
   <body>
     <div class="page-content">
       <h1>Mes Projets BTS SIO</h1>
+
       <div class="projects-container">
+        <!-- Projet 1 -->
         <div class="project-card">
           <div class="project-content">
             <h3>Application Client Lourd</h3>
@@ -168,6 +189,7 @@
           </div>
         </div>
 
+        <!-- Projet 2 -->
         <div class="project-card">
           <div class="project-content">
             <h3>Application Web</h3>
@@ -199,7 +221,19 @@
           </div>
         </div>
       </div>
+
+      <!-- 🔥 Bouton vers les PPE 🔥 -->
+      <div style="text-align: center">
+        <a
+          href="https://tinyurl.com/9tdm2abv"
+          target="_blank"
+          class="ppe-button"
+        >
+          Voir mes PPE (Projets Professionnels Encadrés)
+        </a>
+      </div>
     </div>
+
     <script src="../script.js"></script>
   </body>
 </html>
