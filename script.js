@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!contentArea) return;
 
     try {
-      const response = await fetch(`${pagePath}.html`); // 🔥 Ne PAS doubler "pages/"
+      const response = await fetch(`pages/${pagePath}.html`);
       if (!response.ok) throw new Error("Échec du chargement de la page");
       const content = await response.text();
       contentArea.innerHTML = content;
@@ -27,8 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
   navLinks.forEach((link) => {
     link.addEventListener("click", async (e) => {
       e.preventDefault();
-      const target = e.target instanceof HTMLElement ? e.target : null;
-      if (!target) return;
+
+      const target = e.currentTarget;
+      if (!(target instanceof HTMLElement)) return;
 
       const pagePath = target.getAttribute("href");
       if (pagePath) {
@@ -40,7 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   homeLink.addEventListener("click", async () => {
-    await loadContent("pages/accueil");
+    await loadContent("accueil");
     navLinks.forEach((link) => link.classList.remove("active"));
   });
+
+  // Charger la page d'accueil par défaut
+  loadContent("accueil");
 });
