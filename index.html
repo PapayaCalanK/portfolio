@@ -5,37 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Tom Toison</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
 
   <body>
     <header class="navbar">
-      <div class="logo">TT</div>
+      <div class="logo" id="home-link">TT</div>
       <nav>
         <ul class="nav-links">
-          <li><a href="pages/bts.html">BTS</a></li>
-          <li><a href="pages/projets.html">Projets</a></li>
-          <li><a href="pages/veille.html">Veille</a></li>
-          <li><a href="pages/patrimoine.html">Patrimoine</a></li>
-          <li><a href="pages/synthese.html">Synthèse</a></li>
-          <li><a href="pages/contact.html">Contact</a></li>
+          <li><a href="pages/bts.html" class="nav-link">BTS</a></li>
+          <li><a href="pages/ppe.html" class="nav-link">PPE</a></li>
+          <li><a href="pages/projets.html" class="nav-link">Projets</a></li>
+          <li><a href="pages/veille.html" class="nav-link">Veille</a></li>
+          <li>
+            <a href="pages/patrimoine.html" class="nav-link">Patrimoine</a>
+          </li>
+          <li><a href="pages/synthese.html" class="nav-link">Synthèse</a></li>
+          <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
       <div class="social-links">
-        <a href="https://github.com/PapayaCalanK" target="_blank"
-          ><i class="fab fa-github"></i
-        ></a>
-        <a href="https://www.linkedin.com/in/TON_ID_LINKEDIN" target="_blank"
-          ><i class="fab fa-linkedin"></i
-        ></a>
+        <a
+          href="https://github.com/PapayaCalanK"
+          target="_blank"
+          aria-label="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/TON_ID_LINKEDIN"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
       </div>
     </header>
 
@@ -45,7 +55,7 @@
         <p>BTS SIO - Option SLAM</p>
         <h2><span id="typed-text"></span></h2>
         <div class="hero-buttons">
-          <a href="pages/projets.html" class="btn-primary">Voir mes projets</a>
+          <a href="pages/ppe.html" class="btn-primary">Voir mes projets</a>
           <a href="pages/contact.html" class="btn-secondary">Me contacter</a>
         </div>
       </div>
@@ -55,8 +65,8 @@
     <script>
       const roles = [
         "Développeur Full Stack",
-        "Étudiant BTS SIO SLAM",
-        "Passionné de développement web",
+        "Passionné par les nouvelles technologies",
+        "Créateur de solutions web sur mesure",
       ];
       let roleIndex = 0;
       let charIndex = 0;
@@ -64,18 +74,18 @@
       const typedText = document.getElementById("typed-text");
 
       function typeEffect() {
-        const currentRole = roles[roleIndex];
+        const current = roles[roleIndex];
         if (isDeleting) {
-          typedText.textContent = currentRole.substring(0, charIndex - 1);
+          typedText.textContent = current.substring(0, charIndex - 1);
           charIndex--;
         } else {
-          typedText.textContent = currentRole.substring(0, charIndex + 1);
+          typedText.textContent = current.substring(0, charIndex + 1);
           charIndex++;
         }
 
-        let speed = isDeleting ? 50 : 100;
+        let speed = isDeleting ? 40 : 90;
 
-        if (!isDeleting && charIndex === currentRole.length) {
+        if (!isDeleting && charIndex === current.length) {
           speed = 2000;
           isDeleting = true;
         } else if (isDeleting && charIndex === 0) {
@@ -83,10 +93,8 @@
           roleIndex = (roleIndex + 1) % roles.length;
           speed = 500;
         }
-
         setTimeout(typeEffect, speed);
       }
-
       typeEffect();
     </script>
   </body>

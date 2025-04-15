@@ -1,190 +1,189 @@
+/* ======== BASE GLOBALE ======== */
 :root {
-  --bg-primary: #0f0f0f;
-  --bg-secondary: rgba(29, 29, 31, 0.8);
-  --text-primary: #ffffff;
-  --text-secondary: #a0a0a0;
-  --accent-primary: #a29bfe;
-  --accent-secondary: #6c5ce7;
-  --accent-gradient: linear-gradient(135deg, #6c5ce7, #a29bfe);
-  --border-radius: 16px;
+  --primary: #4a3aff;
+  --primary-hover: #727cff;
+  --background: #ffffff;
+  --text: #1e1e1e;
+  --text-light: #6e6e6e;
+  --section-bg: #f5f6fa;
+  --card-bg: #ffffff;
+  --border: #e0e0e0;
+  --radius: 12px;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* Sections */
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: var(--text-light);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* ======== NAVIGATION ======== */
+.navbar {
+  background: var(--background);
+  box-shadow: var(--shadow);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: var(--primary);
+}
+
+/* ======== HERO SECTION ======== */
+.hero-section {
+  padding: 5rem 2rem;
+  background: var(--section-bg);
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+}
+
+.hero-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.8rem 1.8rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-secondary {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-secondary:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* ======== SECTIONS ======== */
 .page-section {
-  padding: 3rem;
   max-width: 1000px;
-  margin: 0 auto;
-  color: var(--text-primary);
+  margin: auto;
+  padding: 4rem 2rem;
+  background-color: var(--background);
 }
 
 .section-title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: var(--accent-primary);
+  font-size: 2.2rem;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .section-description {
   font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 2.5rem;
   text-align: center;
-  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  color: var(--text-light);
 }
 
-/* Intro */
-.page-section .intro {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-  text-align: justify;
-}
-
-/* Options et Cartes */
-.option-section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.option {
-  background-color: #1e1e1e;
-  padding: 1rem;
-  border-left: 4px solid #5d4fff;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-}
-
-.option.highlight {
-  background: var(--accent-gradient);
-  color: var(--text-primary);
-}
-
-.options-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.option-card {
-  background: #1e1e1e;
-  padding: 1.5rem;
-  border-radius: 12px;
-  border: 1px solid #333;
-}
-
-.option-card.selected {
-  border: 2px solid var(--accent-primary);
-  background-color: #2a2a2a;
-}
-
-.option-card h2 {
-  margin-bottom: 0.8rem;
-  color: var(--text-primary);
-}
-
-/* Boutons CTA */
-.cta-section {
-  text-align: center;
-  margin-top: 3rem;
-}
-
-.cta-button,
-.btn-primary,
-.btn-secondary {
-  padding: 0.9rem 1.8rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.cta-button,
-.btn-primary {
-  background: var(--accent-gradient);
-  color: white;
-}
-
-.cta-button:hover,
-.btn-primary:hover {
-  background: linear-gradient(135deg, #5b4ae6, #928cfd);
-}
-
-.btn-secondary {
-  background: transparent;
-  border: 1px solid var(--accent-primary);
-  color: var(--accent-primary);
-}
-
-.btn-secondary:hover {
-  background: var(--accent-primary);
-  color: white;
-}
-
-/* Blocs d'info */
+/* ======== CARDS ======== */
+.project-card,
 .info-block {
-  background: var(--bg-secondary);
-  border-radius: 12px;
+  background: var(--card-bg);
   padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   margin-bottom: 2rem;
-  border: 1px solid rgba(93, 79, 255, 0.2);
 }
 
-.info-block h2 {
-  font-size: 1.4rem;
-  margin-bottom: 0.8rem;
-  color: var(--text-primary);
+.project-card h2 {
+  margin-top: 0;
 }
 
-.info-list {
-  margin-top: 1rem;
-  padding-left: 1.2rem;
-  list-style-type: disc;
-  color: var(--text-secondary);
+.tech-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: var(--text-light);
 }
 
-/* Contact */
-.contact-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin: 2rem auto;
-  max-width: 600px;
-}
-
-.contact-item {
-  background: #1e1e1e;
-  padding: 1.2rem;
-  border-radius: 10px;
-  border: 1px solid #333;
-}
-
-.contact-label {
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 0.3rem;
-}
-
-.contact-link {
-  color: var(--accent-primary);
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.contact-link:hover {
-  text-decoration: underline;
-}
-
-/* Grilles projets */
 .project-links {
+  margin-top: 1rem;
   display: flex;
   gap: 1rem;
-  margin-top: 1rem;
   flex-wrap: wrap;
 }
 
-.project-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+/* ======== FOOTER ======== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
