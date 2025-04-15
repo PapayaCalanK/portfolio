@@ -3,66 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projets PPE - Tom Toison</title>
+    <title>Projets - Tom Toison</title>
+    <link rel="stylesheet" href="../css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="../css/style.css" />
   </head>
 
   <body>
-    <main class="page-content">
-      <section class="section-title">
-        <h1>Mes Projets PPE</h1>
-        <p class="subtitle">
-          Retrouvez ici les deux Projets Personnalisés Encadrés réalisés durant
-          ma formation BTS SIO.
-        </p>
-      </section>
+    <section class="page-section">
+      <h1 class="section-title">Mes Projets PPE</h1>
+      <p class="section-description">
+        Voici un aperçu de mes projets réalisés durant le BTS SIO SLAM. Chaque
+        projet met en avant une compétence clé de développeur Full Stack.
+      </p>
 
-      <section class="projects-grid">
-        <div class="project-card">
-          <h2>Projet PPE 1 - Site E-commerce</h2>
+      <div class="project-grid">
+        <!-- PPE 1 -->
+        <div class="info-block">
+          <h2>PPE 1 : Site e-commerce "GameTechPro"</h2>
           <p>
-            Développement complet d'un site de vente de PC gamer. Ce projet m’a
-            permis de mettre en œuvre mes compétences en HTML, CSS, JavaScript,
-            PHP, MySQL et sécurité web.
+            Création d’un site de vente en ligne de PC gamer. Mise en place de
+            fonctionnalités essentielles comme l’espace client, le panier, le
+            paiement et l’administration.
           </p>
+          <ul class="info-list">
+            <li>HTML, CSS, JavaScript</li>
+            <li>PHP, MySQL</li>
+            <li>Connexion, panier, base de données</li>
+          </ul>
           <a
             href="https://github.com/PapayaCalanK/ppe1-ecommerce"
-            class="project-link"
             target="_blank"
+            class="btn-primary"
           >
-            <i class="fab fa-github"></i> Voir le projet sur GitHub
+            <i class="fab fa-github"></i> Voir sur GitHub
           </a>
         </div>
 
-        <div class="project-card">
-          <h2>Projet PPE 2 - Application de gestion</h2>
+        <!-- PPE 2 -->
+        <div class="info-block">
+          <h2>PPE 2 : Application de gestion (WINDEV)</h2>
           <p>
-            Création d'une application de gestion interne avec interface
-            graphique, gestion des utilisateurs et base de données.
+            Application client lourd développée sous WINDEV pour gérer les
+            utilisateurs, commandes et produits. Projet orienté entreprise.
           </p>
+          <ul class="info-list">
+            <li>WINDEV, WLangage</li>
+            <li>HFSQL</li>
+            <li>Authentification, CRUD, IHM</li>
+          </ul>
           <a
             href="https://github.com/PapayaCalanK/ppe2-gestion"
-            class="project-link"
             target="_blank"
+            class="btn-primary"
           >
-            <i class="fab fa-github"></i> Voir le projet sur GitHub
+            <i class="fab fa-github"></i> Voir sur GitHub
           </a>
         </div>
-      </section>
+      </div>
 
-      <section class="external-ppe">
+      <!-- Lien externe vers la présentation -->
+      <div class="cta-section">
         <a
           href="https://tinyurl.com/9tdm2abv"
-          class="external-btn"
           target="_blank"
+          class="btn-secondary"
         >
-          <i class="fas fa-folder-open"></i> Voir mes 2 PPE en détail
+          <i class="fas fa-folder-open"></i> Voir mes PPE en détail
         </a>
-      </section>
-    </main>
+      </div>
+    </section>
   </body>
 </html>

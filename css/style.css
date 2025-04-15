@@ -1,16 +1,38 @@
-.page-section {
-  padding: 2rem;
-  max-width: 1000px;
-  margin: auto;
-  color: #fff;
+:root {
+  --bg-primary: #0f0f0f;
+  --bg-secondary: rgba(29, 29, 31, 0.8);
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --accent-primary: #a29bfe;
+  --accent-secondary: #6c5ce7;
+  --accent-gradient: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  --border-radius: 16px;
 }
 
-.page-section h1 {
+/* Sections */
+.page-section {
+  padding: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: var(--text-primary);
+}
+
+.section-title {
   font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent-primary);
   text-align: center;
 }
 
+.section-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+/* Intro */
 .page-section .intro {
   font-size: 1.1rem;
   line-height: 1.6;
@@ -18,6 +40,7 @@
   text-align: justify;
 }
 
+/* Options et Cartes */
 .option-section h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -32,24 +55,136 @@
 }
 
 .option.highlight {
-  background: linear-gradient(to right, #5d4fff, #7f6cff);
-  color: #fff;
+  background: var(--accent-gradient);
+  color: var(--text-primary);
 }
 
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.option-card {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #333;
+}
+
+.option-card.selected {
+  border: 2px solid var(--accent-primary);
+  background-color: #2a2a2a;
+}
+
+.option-card h2 {
+  margin-bottom: 0.8rem;
+  color: var(--text-primary);
+}
+
+/* Boutons CTA */
 .cta-section {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
-.cta-button {
-  background: #5d4fff;
-  color: white;
-  padding: 0.8rem 2rem;
-  border-radius: 30px;
+.cta-button,
+.btn-primary,
+.btn-secondary {
+  padding: 0.9rem 1.8rem;
+  border-radius: 8px;
+  font-size: 1rem;
   text-decoration: none;
-  transition: background 0.3s ease;
+  font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.cta-button:hover {
-  background: #786dff;
+.cta-button,
+.btn-primary {
+  background: var(--accent-gradient);
+  color: white;
+}
+
+.cta-button:hover,
+.btn-primary:hover {
+  background: linear-gradient(135deg, #5b4ae6, #928cfd);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--accent-primary);
+  color: white;
+}
+
+/* Blocs d'info */
+.info-block {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(93, 79, 255, 0.2);
+}
+
+.info-block h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-primary);
+}
+
+.info-list {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  list-style-type: disc;
+  color: var(--text-secondary);
+}
+
+/* Contact */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.contact-item {
+  background: #1e1e1e;
+  padding: 1.2rem;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+
+.contact-label {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.contact-link {
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+/* Grilles projets */
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }

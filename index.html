@@ -18,34 +18,24 @@
 
   <body>
     <header class="navbar">
-      <div class="logo" id="home-link">TT</div>
+      <div class="logo">TT</div>
       <nav>
         <ul class="nav-links">
-          <li><a href="pages/bts.html" class="nav-link">BTS</a></li>
-          <li><a href="pages/projets.html" class="nav-link">Projets</a></li>
-          <li><a href="pages/veille.html" class="nav-link">Veille</a></li>
-          <li>
-            <a href="pages/patrimoine.html" class="nav-link">Patrimoine</a>
-          </li>
-          <li><a href="pages/synthese.html" class="nav-link">Synthèse</a></li>
-          <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+          <li><a href="pages/bts.html">BTS</a></li>
+          <li><a href="pages/projets.html">Projets</a></li>
+          <li><a href="pages/veille.html">Veille</a></li>
+          <li><a href="pages/patrimoine.html">Patrimoine</a></li>
+          <li><a href="pages/synthese.html">Synthèse</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
         </ul>
       </nav>
       <div class="social-links">
-        <a
-          href="https://github.com/PapayaCalanK"
-          target="_blank"
-          aria-label="GitHub"
-        >
-          <i class="fab fa-github"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/TON_ID_LINKEDIN"
-          target="_blank"
-          aria-label="LinkedIn"
-        >
-          <i class="fab fa-linkedin"></i>
-        </a>
+        <a href="https://github.com/PapayaCalanK" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/TON_ID_LINKEDIN" target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
       </div>
     </header>
 
@@ -65,8 +55,8 @@
     <script>
       const roles = [
         "Développeur Full Stack",
-        "Passionné par les nouvelles technologies",
-        "Créateur de solutions web sur mesure",
+        "Étudiant BTS SIO SLAM",
+        "Passionné de développement web",
       ];
       let roleIndex = 0;
       let charIndex = 0;
@@ -74,18 +64,18 @@
       const typedText = document.getElementById("typed-text");
 
       function typeEffect() {
-        const current = roles[roleIndex];
+        const currentRole = roles[roleIndex];
         if (isDeleting) {
-          typedText.textContent = current.substring(0, charIndex - 1);
+          typedText.textContent = currentRole.substring(0, charIndex - 1);
           charIndex--;
         } else {
-          typedText.textContent = current.substring(0, charIndex + 1);
+          typedText.textContent = currentRole.substring(0, charIndex + 1);
           charIndex++;
         }
 
-        let speed = isDeleting ? 40 : 90;
+        let speed = isDeleting ? 50 : 100;
 
-        if (!isDeleting && charIndex === current.length) {
+        if (!isDeleting && charIndex === currentRole.length) {
           speed = 2000;
           isDeleting = true;
         } else if (isDeleting && charIndex === 0) {
@@ -93,8 +83,10 @@
           roleIndex = (roleIndex + 1) % roles.length;
           speed = 500;
         }
+
         setTimeout(typeEffect, speed);
       }
+
       typeEffect();
     </script>
   </body>
