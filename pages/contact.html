@@ -5,46 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - Tom Toison</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
-    <section class="page-section">
-      <h1 class="section-title">Me contacter</h1>
+    <header class="navbar">
+      <div class="logo" id="home-link">TT</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="bts.html" class="nav-link">BTS</a></li>
+          <li><a href="ppe.html" class="nav-link">PPE</a></li>
+          <li><a href="projets.html" class="nav-link">Projets</a></li>
+          <li><a href="veille.html" class="nav-link">Veille</a></li>
+          <li><a href="patrimoine.html" class="nav-link">Patrimoine</a></li>
+          <li><a href="synthese.html" class="nav-link">Synthèse</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="social-links">
+        <a
+          href="https://github.com/PapayaCalanK"
+          target="_blank"
+          aria-label="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/TON_ID_LINKEDIN"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </header>
+
+    <main class="page-section">
+      <h1>Me Contacter</h1>
       <p class="section-description">
-        Vous souhaitez me joindre pour une alternance, un stage ou un projet ?
-        Voici mes coordonnées :
+        Vous souhaitez me contacter pour une alternance ou un projet ? Voici mes
+        coordonnées :
       </p>
 
       <div class="contact-container">
         <div class="contact-item">
           <span class="contact-label">📧 Email :</span>
-          <a href="mailto:tom.toison@example.com" class="contact-link"
-            >tom.toison@example.com</a
+          <a href="mailto:tomtoison75@gmail.com" class="contact-link"
+            >tomtoison75@gmail.com</a
           >
         </div>
-
         <div class="contact-item">
           <span class="contact-label">💼 LinkedIn :</span>
           <a
             href="https://www.linkedin.com/in/TON_ID_LINKEDIN"
             target="_blank"
             class="contact-link"
+            >linkedin.com/in/TON_ID_LINKEDIN</a
           >
-            linkedin.com/in/TON_ID_LINKEDIN
-          </a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">💻 GitHub :</span>
+          <a
+            href="https://github.com/PapayaCalanK"
+            target="_blank"
+            class="contact-link"
+            >github.com/PapayaCalanK</a
+          >
         </div>
       </div>
 
       <div class="cta-section">
-        <a href="mailto:tom.toison@example.com" class="btn-primary"
+        <a href="mailto:tomtoison75@gmail.com" class="btn-primary"
           >M’envoyer un e-mail</a
         >
         <a
           href="https://www.linkedin.com/in/TON_ID_LINKEDIN"
+          class="btn-secondary"
           target="_blank"
-          class="btn-primary"
-          >Voir mon LinkedIn</a
+          >Voir mon profil LinkedIn</a
         >
       </div>
-    </section>
+    </main>
+
+    <script src="../js/script.js"></script>
   </body>
 </html>

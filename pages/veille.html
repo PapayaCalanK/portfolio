@@ -9,36 +9,89 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
 
   <body>
-    <section class="page-section">
+    <!-- HEADER -->
+    <header class="navbar">
+      <div class="logo" id="home-link">TT</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="bts.html" class="nav-link">BTS</a></li>
+          <li><a href="ppe.html" class="nav-link">PPE</a></li>
+          <li><a href="projets.html" class="nav-link">Projets</a></li>
+          <li><a href="veille.html" class="nav-link active">Veille</a></li>
+          <li><a href="patrimoine.html" class="nav-link">Patrimoine</a></li>
+          <li><a href="synthese.html" class="nav-link">Synthèse</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="social-links">
+        <a
+          href="https://github.com/PapayaCalanK"
+          target="_blank"
+          aria-label="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/TON_ID_LINKEDIN"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </header>
+
+    <!-- CONTENU -->
+    <main class="page-section">
       <h1 class="section-title">Veille Technologique</h1>
       <p class="section-description">
-        Dans le cadre du BTS SIO, j’ai réalisé une veille technologique sur le
-        thème des
-        <strong>API</strong>, et une
-        <strong>présentation de mon entreprise</strong> pour l’oral.
+        Ma veille technologique porte sur les <strong>API</strong> et leur
+        impact dans le développement web moderne. Elle m’a permis de suivre les
+        évolutions des technologies REST, GraphQL et les pratiques d'intégration
+        d'API en entreprise.
       </p>
 
-      <div class="cta-buttons" style="text-align: center; margin-top: 3rem">
+      <div class="info-block">
+        <h2>🧠 Sujet de veille</h2>
+        <p>
+          L’objectif est de mieux comprendre le fonctionnement, les usages et
+          les enjeux des API dans le monde du développement.
+        </p>
+      </div>
+
+      <div class="info-block">
+        <h2>🔧 Outils utilisés</h2>
+        <ul class="info-list">
+          <li>Google Alerts</li>
+          <li>Feedly</li>
+          <li>Twitter (X)</li>
+          <li>Sites spécialisés (ProgrammableWeb, RapidAPI, etc.)</li>
+        </ul>
+      </div>
+
+      <div class="cta-section">
         <a
           href="https://gamma.app/docs/putd9z7n4mboroy"
           target="_blank"
           class="btn-primary"
-          style="margin-bottom: 1.5rem; display: inline-block"
         >
-          📄 Voir la Veille Technologique sur les API
+          📄 Voir la veille sur les API
         </a>
-        <br />
         <a
           href="https://gamma.app/docs/564bd6coc5feakr"
           target="_blank"
           class="btn-secondary"
         >
-          🏢 Voir la Présentation de l'Entreprise
+          🏢 Voir la présentation en entreprise
         </a>
       </div>
-    </section>
+    </main>
   </body>
 </html>

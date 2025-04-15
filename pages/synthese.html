@@ -3,58 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tableau de Synthèse - Tom Toison</title>
+    <title>Synthèse - Tom Toison</title>
     <link rel="stylesheet" href="../css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
-    <section class="page-section">
-      <h1 class="section-title">Tableau de Synthèse</h1>
+    <header class="navbar">
+      <div class="logo" id="home-link">TT</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="bts.html" class="nav-link">BTS</a></li>
+          <li><a href="ppe.html" class="nav-link">PPE</a></li>
+          <li><a href="projets.html" class="nav-link">Projets</a></li>
+          <li><a href="veille.html" class="nav-link">Veille</a></li>
+          <li><a href="patrimoine.html" class="nav-link">Patrimoine</a></li>
+          <li><a href="synthese.html" class="nav-link active">Synthèse</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="social-links">
+        <a
+          href="https://github.com/PapayaCalanK"
+          target="_blank"
+          aria-label="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/TON_ID_LINKEDIN"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </header>
+
+    <main class="page-section">
+      <h1>Tableau de Synthèse</h1>
       <p class="section-description">
-        Ce tableau récapitule les compétences professionnelles que j’ai
-        développées au cours de ma formation BTS SIO option SLAM. Il met en lien
-        mes projets, les contextes professionnels et les savoir-faire mobilisés.
+        Voici le tableau récapitulatif des compétences que j’ai développées
+        durant ma formation BTS SIO option SLAM. Ce tableau fait le lien entre
+        les compétences du référentiel et les projets réalisés.
       </p>
 
       <div class="cta-section">
-        <a
-          href="../assets/tableau-synthese.pdf"
-          download
-          class="btn-primary"
-          target="_blank"
-        >
-          <i class="fas fa-download"></i> Télécharger le tableau de synthèse
+        <a href="../assets/tableau-synthese.pdf" class="btn-primary" download>
+          <i class="fas fa-table"></i> Télécharger le tableau de synthèse
         </a>
       </div>
 
-      <div class="info-block">
-        <h2>Compétences Maîtrisées</h2>
-        <ul class="info-list">
-          <li>Développement Frontend (HTML, CSS, JavaScript)</li>
-          <li>Développement Backend (PHP, MySQL, HFSQL)</li>
-          <li>Conception de bases de données relationnelles</li>
-          <li>Création d’interfaces web et desktop</li>
-          <li>Utilisation de Git, GitHub et gestion de versions</li>
-          <li>Rédaction de documentation technique et utilisateur</li>
-        </ul>
+      <div class="cta-section" style="margin-top: 1rem">
+        <a href="../assets/cv.pdf" class="btn-secondary" download>
+          <i class="fas fa-file-pdf"></i> Télécharger mon CV
+        </a>
       </div>
+    </main>
 
-      <div class="info-block">
-        <h2>Projets associés</h2>
-        <ul class="info-list">
-          <li>
-            <strong>PPE 1 :</strong> Site e-commerce complet (catalogue, panier,
-            espace client)
-          </li>
-          <li>
-            <strong>PPE 2 :</strong> Application WINDEV de gestion d’inventaire
-            et utilisateurs
-          </li>
-        </ul>
-      </div>
-    </section>
+    <script src="../js/script.js"></script>
   </body>
 </html>

@@ -6,74 +6,106 @@
     <title>Projets - Tom Toison</title>
     <link rel="stylesheet" href="../css/style.css" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
 
   <body>
-    <section class="page-section">
-      <h1 class="section-title">Mes Projets PPE</h1>
-      <p class="section-description">
-        Voici un aperçu de mes projets réalisés durant le BTS SIO SLAM. Chaque
-        projet met en avant une compétence clé de développeur Full Stack.
-      </p>
-
-      <div class="project-grid">
-        <!-- PPE 1 -->
-        <div class="info-block">
-          <h2>PPE 1 : Site e-commerce "GameTechPro"</h2>
-          <p>
-            Création d’un site de vente en ligne de PC gamer. Mise en place de
-            fonctionnalités essentielles comme l’espace client, le panier, le
-            paiement et l’administration.
-          </p>
-          <ul class="info-list">
-            <li>HTML, CSS, JavaScript</li>
-            <li>PHP, MySQL</li>
-            <li>Connexion, panier, base de données</li>
-          </ul>
-          <a
-            href="https://github.com/PapayaCalanK/ppe1-ecommerce"
-            target="_blank"
-            class="btn-primary"
-          >
-            <i class="fab fa-github"></i> Voir sur GitHub
-          </a>
-        </div>
-
-        <!-- PPE 2 -->
-        <div class="info-block">
-          <h2>PPE 2 : Application de gestion (WINDEV)</h2>
-          <p>
-            Application client lourd développée sous WINDEV pour gérer les
-            utilisateurs, commandes et produits. Projet orienté entreprise.
-          </p>
-          <ul class="info-list">
-            <li>WINDEV, WLangage</li>
-            <li>HFSQL</li>
-            <li>Authentification, CRUD, IHM</li>
-          </ul>
-          <a
-            href="https://github.com/PapayaCalanK/ppe2-gestion"
-            target="_blank"
-            class="btn-primary"
-          >
-            <i class="fab fa-github"></i> Voir sur GitHub
-          </a>
-        </div>
-      </div>
-
-      <!-- Lien externe vers la présentation -->
-      <div class="cta-section">
+    <!-- HEADER -->
+    <header class="navbar">
+      <div class="logo" id="home-link">TT</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="bts.html" class="nav-link">BTS</a></li>
+          <li><a href="ppe.html" class="nav-link">PPE</a></li>
+          <li><a href="projets.html" class="nav-link active">Projets</a></li>
+          <li><a href="veille.html" class="nav-link">Veille</a></li>
+          <li><a href="patrimoine.html" class="nav-link">Patrimoine</a></li>
+          <li><a href="synthese.html" class="nav-link">Synthèse</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="social-links">
         <a
-          href="https://tinyurl.com/9tdm2abv"
+          href="https://github.com/PapayaCalanK"
           target="_blank"
-          class="btn-secondary"
+          aria-label="GitHub"
         >
-          <i class="fas fa-folder-open"></i> Voir mes PPE en détail
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/TON_ID_LINKEDIN"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
         </a>
       </div>
-    </section>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="page-section">
+      <h1 class="section-title">Mes Projets de Formation</h1>
+      <p class="section-description">
+        Découvrez mes réalisations développées dans le cadre du BTS SIO,
+        incluant des applications web, clients lourds et des projets
+        professionnels concrets.
+      </p>
+
+      <div class="info-block">
+        <h2>Application Client Lourd</h2>
+        <p>
+          Développement d'une application de gestion interne en C# Windows Forms
+          avec :
+        </p>
+        <ul class="info-list">
+          <li>Interface utilisateur graphique</li>
+          <li>Gestion CRUD des ressources</li>
+          <li>Connexion à une base de données locale</li>
+        </ul>
+        <div class="project-links">
+          <a
+            href="https://github.com/votre-compte/projet-client-lourd"
+            target="_blank"
+            class="btn-primary"
+          >
+            <i class="fab fa-github"></i> Voir sur GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <h2>Application Web PHP / MySQL</h2>
+        <p>
+          Création d’un site web complet avec base de données MySQL, système
+          d’authentification, et gestion d’un espace utilisateur.
+        </p>
+        <ul class="info-list">
+          <li>Front-end responsive</li>
+          <li>Système de connexion sécurisé</li>
+          <li>Back-end en PHP natif</li>
+        </ul>
+        <div class="project-links">
+          <a
+            href="https://github.com/votre-compte/projet-web"
+            target="_blank"
+            class="btn-primary"
+          >
+            <i class="fab fa-github"></i> Voir sur GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="cta-section">
+        <a href="ppe.html" class="btn-secondary">
+          <i class="fas fa-folder-open"></i> Voir les PPE en détail
+        </a>
+      </div>
+    </main>
   </body>
 </html>

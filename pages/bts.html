@@ -5,45 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BTS SIO - Tom Toison</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
+
   <body>
-    <section class="page-section">
+    <!-- HEADER -->
+    <header class="navbar">
+      <div class="logo" id="home-link">TT</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="bts.html" class="nav-link active">BTS</a></li>
+          <li><a href="ppe.html" class="nav-link">PPE</a></li>
+          <li><a href="projets.html" class="nav-link">Projets</a></li>
+          <li><a href="veille.html" class="nav-link">Veille</a></li>
+          <li><a href="patrimoine.html" class="nav-link">Patrimoine</a></li>
+          <li><a href="synthese.html" class="nav-link">Synthèse</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="social-links">
+        <a
+          href="https://github.com/PapayaCalanK"
+          target="_blank"
+          aria-label="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/TON_ID_LINKEDIN"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="page-section">
       <h1 class="section-title">
         BTS SIO - Services Informatiques aux Organisations
       </h1>
-
       <p class="section-description">
         Le <strong>BTS SIO</strong> (Services Informatiques aux Organisations)
-        est un diplôme de niveau Bac+2 qui forme des techniciens capables de
-        gérer des solutions informatiques pour les entreprises. La formation se
-        déroule sur 2 ans avec un enseignement pratique et professionnalisant.
+        est une formation Bac+2 qui forme des techniciens capables de gérer les
+        solutions informatiques pour les entreprises. Elle propose deux options
+        spécialisées.
       </p>
 
-      <div class="options-container">
-        <div class="option-card">
-          <h2>🖧 Option SISR</h2>
-          <p>
-            <strong>Solutions d’Infrastructure, Systèmes et Réseaux</strong
-            ><br />
-            Cette option est axée sur l’installation, la maintenance et la
-            sécurisation des équipements réseaux et serveurs.
-          </p>
-        </div>
+      <div class="info-block">
+        <h2>💻 Option SLAM (Mon choix)</h2>
+        <ul class="info-list">
+          <li>
+            Développement d’applications web, mobiles et logiciels métiers
+          </li>
+          <li>Utilisation de bases de données, langages de programmation</li>
+          <li>Gestion de projet, documentation, qualité</li>
+        </ul>
+      </div>
 
-        <div class="option-card selected">
-          <h2>💻 Option SLAM (Mon choix)</h2>
-          <p>
-            <strong>Solutions Logicielles et Applications Métiers</strong><br />
-            Cette spécialisation se concentre sur le développement
-            d’applications web, mobiles et logicielles adaptées aux besoins
-            métiers.
-          </p>
-        </div>
+      <div class="info-block">
+        <h2>🖧 Option SISR</h2>
+        <ul class="info-list">
+          <li>Gestion d’infrastructure réseau, systèmes, sécurité</li>
+          <li>Virtualisation, maintenance, supervision</li>
+          <li>Déploiement de solutions d’entreprise</li>
+        </ul>
       </div>
 
       <div class="cta-section">
-        <a href="projets.html" class="btn-primary">Voir mes projets SLAM</a>
+        <a href="ppe.html" class="btn-primary">Voir mes projets SLAM</a>
       </div>
-    </section>
+    </main>
   </body>
 </html>

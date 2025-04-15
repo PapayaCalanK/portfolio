@@ -3,54 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gestion du Patrimoine Informatique - Tom Toison</title>
+    <title>Gestion du Patrimoine - Tom Toison</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
-  <body>
-    <section class="page-section">
-      <h1 class="section-title">Gestion du Patrimoine Informatique</h1>
 
+  <body>
+    <!-- HEADER -->
+    <header class="navbar">
+      <div class="logo" id="home-link">TT</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="bts.html" class="nav-link">BTS</a></li>
+          <li><a href="ppe.html" class="nav-link">PPE</a></li>
+          <li><a href="projets.html" class="nav-link">Projets</a></li>
+          <li><a href="veille.html" class="nav-link">Veille</a></li>
+          <li>
+            <a href="patrimoine.html" class="nav-link active">Patrimoine</a>
+          </li>
+          <li><a href="synthese.html" class="nav-link">Synthèse</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="social-links">
+        <a
+          href="https://github.com/PapayaCalanK"
+          target="_blank"
+          aria-label="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/TON_ID_LINKEDIN"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </header>
+
+    <!-- CONTENU -->
+    <main class="page-section">
+      <h1 class="section-title">Gestion du Patrimoine Informatique</h1>
       <p class="section-description">
-        Cette section présente les connaissances acquises en gestion du
-        patrimoine informatique, un axe essentiel du BTS SIO.
+        Cette section présente les compétences acquises dans le domaine de la
+        gestion du SI et du parc informatique : installation, sécurité,
+        documentation et maintien des systèmes.
       </p>
 
       <div class="info-block">
-        <h2>📌 Concepts clés abordés :</h2>
+        <h2>📚 Concepts Clés</h2>
         <ul class="info-list">
-          <li>Inventaire du matériel et des logiciels</li>
-          <li>Suivi des licences et des mises à jour</li>
-          <li>Virtualisation, sauvegarde et déploiement</li>
-          <li>Sécurité des postes et des réseaux</li>
-          <li>Surveillance des infrastructures (outils de supervision)</li>
+          <li>Inventaire et maintenance du parc informatique</li>
+          <li>Documentation des procédures techniques</li>
+          <li>Plan de sauvegarde et sécurité des données</li>
+          <li>Virtualisation et gestion de serveurs</li>
+          <li>Suivi des interventions (GLPI, ticketing)</li>
         </ul>
       </div>
 
       <div class="info-block">
-        <h2>🛠 Outils utilisés :</h2>
+        <h2>🛠 Outils utilisés</h2>
         <ul class="info-list">
-          <li>GLPI (gestion de parc informatique)</li>
-          <li>OCS Inventory</li>
-          <li>VirtualBox, Hyper-V</li>
-          <li>Windows Server, Active Directory</li>
-        </ul>
-      </div>
-
-      <div class="info-block">
-        <h2>📁 Expériences réalisées :</h2>
-        <ul class="info-list">
-          <li>Installation d’un serveur Windows avec Active Directory</li>
-          <li>Création d’une arborescence réseau pour une PME</li>
-          <li>Déploiement d’images systèmes avec WDS</li>
-          <li>Utilisation de scripts PowerShell pour automatiser des tâches</li>
+          <li>VirtualBox / Hyper-V</li>
+          <li>GLPI / OCS Inventory</li>
+          <li>Windows Server / Active Directory</li>
+          <li>Wireshark, pfSense, GPO</li>
         </ul>
       </div>
 
       <div class="cta-section">
-        <a href="synthese.html" class="btn-primary"
-          >Voir la synthèse des compétences</a
-        >
+        <a href="synthese.html" class="btn-primary">Voir la Synthèse</a>
       </div>
-    </section>
+    </main>
   </body>
 </html>
