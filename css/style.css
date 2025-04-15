@@ -187,3 +187,6 @@ footer {
     gap: 1rem;
   }
 }
+.contact-container p {
+  margin-bottom: 0.5rem;
+}
