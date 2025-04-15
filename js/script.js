@@ -27,17 +27,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   navLinks.forEach((link) => {
     link.addEventListener("click", async (e) => {
+      // Empêche le comportement par défaut uniquement pour les liens internes
+      const href = link.getAttribute("href");
+      if (!href || href.startsWith("http")) return;
+
       e.preventDefault();
-
-      const target = e.currentTarget;
-      if (!(target instanceof HTMLElement)) return;
-
-      const pagePath = target.getAttribute("href");
-      if (pagePath) {
-        await loadContent(pagePath);
-        navLinks.forEach((l) => l.classList.remove("active"));
-        target.classList.add("active");
-      }
+      const pagePath = href;
+      await loadContent(pagePath);
+      navLinks.forEach((l) => l.classList.remove("active"));
+      link.classList.add("active");
     });
   });
 

@@ -3,237 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projets - Tom Toison</title>
+    <title>Projets PPE - Tom Toison</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="../profil.css" />
-    <style>
-      .page-content {
-        padding: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      h1 {
-        font-size: 2.5rem;
-        margin-bottom: 4rem;
-        text-align: center;
-        color: var(--text-color);
-      }
-
-      .projects-container {
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-      }
-
-      .project-card {
-        position: relative;
-        padding: 2rem;
-        background: var(--card-bg);
-        border-radius: 10px;
-        border: 1px solid rgba(93, 79, 255, 0.3);
-        box-shadow: 0 0 20px rgba(93, 79, 255, 0.05);
-      }
-
-      .project-card::before {
-        content: "";
-        position: absolute;
-        top: -1px;
-        left: -1px;
-        right: -1px;
-        bottom: -1px;
-        background: linear-gradient(45deg, rgba(93, 79, 255, 0.2), transparent);
-        border-radius: 11px;
-        z-index: -1;
-      }
-
-      .project-content {
-        padding: 1rem;
-      }
-
-      .project-content h3 {
-        font-size: 1.8rem;
-        margin-bottom: 1.5rem;
-        color: var(--text-color);
-      }
-
-      .project-content p {
-        margin-bottom: 2rem;
-        line-height: 1.8;
-        color: var(--text-color);
-        font-size: 1.1rem;
-      }
-
-      .project-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 2rem;
-      }
-
-      .project-tags {
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-      }
-
-      .project-links {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-      }
-
-      .project-tags span {
-        background: rgba(93, 79, 255, 0.05);
-        color: var(--text-color);
-        padding: 0.7rem 1.2rem;
-        border-radius: 5px;
-        font-size: 0.9rem;
-        border: 1px solid rgba(93, 79, 255, 0.2);
-      }
-
-      .project-link {
-        width: 35px;
-        height: 35px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        color: var(--text-color);
-        text-decoration: none;
-        font-size: 1rem;
-        transition: all 0.3s ease;
-        background: rgba(93, 79, 255, 0.1);
-        border: 1px solid rgba(93, 79, 255, 0.3);
-      }
-
-      .project-link:hover {
-        color: #5d4fff;
-        box-shadow: 0 0 10px rgba(93, 79, 255, 0.5),
-          0 0 20px rgba(93, 79, 255, 0.3), 0 0 30px rgba(93, 79, 255, 0.1);
-        transform: translateY(-2px);
-      }
-
-      /* Style du bouton PPE */
-      .ppe-button {
-        display: inline-block;
-        background: linear-gradient(135deg, #6c5ce7, #a29bfe);
-        color: #fff;
-        padding: 1rem 2rem;
-        border-radius: 12px;
-        text-decoration: none;
-        font-size: 1.1rem;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease;
-        margin-top: 3rem;
-      }
-
-      .ppe-button:hover {
-        transform: translateY(-3px);
-      }
-
-      @media (max-width: 768px) {
-        .project-card {
-          padding: 1.5rem;
-        }
-
-        h1 {
-          font-size: 2rem;
-          margin-bottom: 2rem;
-        }
-
-        .project-content h3 {
-          font-size: 1.5rem;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
 
   <body>
-    <div class="page-content">
-      <h1>Mes Projets BTS SIO</h1>
+    <main class="page-content">
+      <section class="section-title">
+        <h1>Mes Projets PPE</h1>
+        <p class="subtitle">
+          Retrouvez ici les deux Projets Personnalisés Encadrés réalisés durant
+          ma formation BTS SIO.
+        </p>
+      </section>
 
-      <div class="projects-container">
-        <!-- Projet 1 -->
+      <section class="projects-grid">
         <div class="project-card">
-          <div class="project-content">
-            <h3>Application Client Lourd</h3>
-            <p>
-              Développement d'une application desktop en C# pour la gestion
-              interne. Utilisation des concepts de programmation orientée objet
-              et interface graphique Windows Forms.
-            </p>
-            <div class="project-footer">
-              <div class="project-tags">
-                <span>C#</span>
-                <span>Windows Forms</span>
-                <span>POO</span>
-              </div>
-              <div class="project-links">
-                <a href="#" class="project-link" title="Voir le projet">
-                  <i class="fas fa-eye"></i>
-                </a>
-                <a
-                  href="https://github.com/votre-compte/projet-client-lourd"
-                  class="project-link"
-                  target="_blank"
-                  title="Voir sur GitHub"
-                >
-                  <i class="fab fa-github"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+          <h2>Projet PPE 1 - Site E-commerce</h2>
+          <p>
+            Développement complet d'un site de vente de PC gamer. Ce projet m’a
+            permis de mettre en œuvre mes compétences en HTML, CSS, JavaScript,
+            PHP, MySQL et sécurité web.
+          </p>
+          <a
+            href="https://github.com/PapayaCalanK/ppe1-ecommerce"
+            class="project-link"
+            target="_blank"
+          >
+            <i class="fab fa-github"></i> Voir le projet sur GitHub
+          </a>
         </div>
 
-        <!-- Projet 2 -->
         <div class="project-card">
-          <div class="project-content">
-            <h3>Application Web</h3>
-            <p>
-              Développement d'une application web complète avec une base de
-              données MySQL. Frontend en HTML/CSS/JavaScript et backend en PHP.
-            </p>
-            <div class="project-footer">
-              <div class="project-tags">
-                <span>HTML/CSS</span>
-                <span>JavaScript</span>
-                <span>PHP</span>
-                <span>MySQL</span>
-              </div>
-              <div class="project-links">
-                <a href="#" class="project-link" title="Voir le projet">
-                  <i class="fas fa-eye"></i>
-                </a>
-                <a
-                  href="https://github.com/votre-compte/projet-web"
-                  class="project-link"
-                  target="_blank"
-                  title="Voir sur GitHub"
-                >
-                  <i class="fab fa-github"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+          <h2>Projet PPE 2 - Application de gestion</h2>
+          <p>
+            Création d'une application de gestion interne avec interface
+            graphique, gestion des utilisateurs et base de données.
+          </p>
+          <a
+            href="https://github.com/PapayaCalanK/ppe2-gestion"
+            class="project-link"
+            target="_blank"
+          >
+            <i class="fab fa-github"></i> Voir le projet sur GitHub
+          </a>
         </div>
-      </div>
+      </section>
 
-      <!-- 🔥 Bouton vers les PPE 🔥 -->
-      <div style="text-align: center">
+      <section class="external-ppe">
         <a
           href="https://tinyurl.com/9tdm2abv"
+          class="external-btn"
           target="_blank"
-          class="ppe-button"
         >
-          Voir mes PPE (Projets Professionnels Encadrés)
+          <i class="fas fa-folder-open"></i> Voir mes 2 PPE en détail
         </a>
-      </div>
-    </div>
-
-    <script src="../script.js"></script>
+      </section>
+    </main>
   </body>
 </html>

@@ -1,0 +1,55 @@
+.page-section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  color: #fff;
+}
+
+.page-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.page-section .intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.option-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.option {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-left: 4px solid #5d4fff;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.option.highlight {
+  background: linear-gradient(to right, #5d4fff, #7f6cff);
+  color: #fff;
+}
+
+.cta-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta-button {
+  background: #5d4fff;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #786dff;
+}
