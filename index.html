@@ -2,9 +2,23 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <!-- SEO & partage social -->
+    <meta
+      name="description"
+      content="Portfolio de Tom Toison – BTS SIO SLAM, développeur Full-Stack. Projets, veille techno et contact."
+    />
+    <meta property="og:title" content="Portfolio – Tom Toison" />
+    <meta
+      property="og:description"
+      content="Découvrez mes projets web, mes compétences et ma veille technologique."
+    />
+    <meta property="og:image" content="assets/preview.png" />
+    <meta property="og:type" content="website" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Tom Toison</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -17,7 +31,10 @@
 
   <body>
     <header class="navbar">
-      <div class="logo" id="home-link">TT</div>
+      <a href="/" class="logo" id="home-link" aria-label="Retour à l’accueil"
+        >TT</a
+      >
+
       <nav>
         <ul class="nav-links">
           <li><a href="pages/bts.html" class="nav-link">BTS</a></li>
@@ -30,6 +47,7 @@
           <li><a href="pages/synthese.html" class="nav-link">Synthèse</a></li>
           <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
         </ul>
+        c
       </nav>
       <div class="social-links">
         <a
@@ -60,42 +78,6 @@
         </div>
       </div>
     </main>
-
     <script src="js/script.js"></script>
-    <script>
-      const roles = [
-        "Développeur Full Stack",
-        "Passionné par les nouvelles technologies",
-        "Créateur de solutions web sur mesure",
-      ];
-      let roleIndex = 0;
-      let charIndex = 0;
-      let isDeleting = false;
-      const typedText = document.getElementById("typed-text");
-
-      function typeEffect() {
-        const current = roles[roleIndex];
-        if (isDeleting) {
-          typedText.textContent = current.substring(0, charIndex - 1);
-          charIndex--;
-        } else {
-          typedText.textContent = current.substring(0, charIndex + 1);
-          charIndex++;
-        }
-
-        let speed = isDeleting ? 40 : 90;
-
-        if (!isDeleting && charIndex === current.length) {
-          speed = 2000;
-          isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-          isDeleting = false;
-          roleIndex = (roleIndex + 1) % roles.length;
-          speed = 500;
-        }
-        setTimeout(typeEffect, speed);
-      }
-      typeEffect();
-    </script>
   </body>
 </html>

@@ -3,8 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de Tom Toison – BTS SIO SLAM, développeur Full-Stack. Projets, veille techno et contact."
+    />
+    <meta property="og:title" content="Portfolio – Tom Toison" />
+    <meta
+      property="og:description"
+      content="Découvrez mes projets web, mes compétences et ma veille technologique."
+    />
+    <meta property="og:image" content="assets/preview.png" />
+    <meta property="og:type" content="website" />
     <title>Synthèse - Tom Toison</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -17,7 +30,10 @@
 
   <body>
     <header class="navbar">
-      <div class="logo" id="home-link">TT</div>
+      <a href="/" class="logo" id="home-link" aria-label="Retour à l’accueil"
+        >TT</a
+      >
+
       <nav>
         <ul class="nav-links">
           <li><a href="bts.html" class="nav-link">BTS</a></li>
@@ -61,13 +77,12 @@
         </a>
       </div>
 
-      <div class="cta-section" style="margin-top: 1rem">
+      <div class="cta-section second-cta">
         <a href="../assets/cv.pdf" class="btn-secondary" download>
           <i class="fas fa-file-pdf"></i> Télécharger mon CV
         </a>
       </div>
     </main>
-
     <script src="../js/script.js"></script>
   </body>
 </html>
