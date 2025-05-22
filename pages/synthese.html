@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO & partage social -->
     <meta
       name="description"
       content="Portfolio de Tom Toison – BTS SIO SLAM, développeur Full-Stack. Projets, veille techno et contact."
@@ -12,12 +13,12 @@
       property="og:description"
       content="Découvrez mes projets web, mes compétences et ma veille technologique."
     />
-    <meta property="og:image" content="assets/preview.png" />
+    <meta property="og:image" content="../assets/preview.png" />
     <meta property="og:type" content="website" />
     <title>Synthèse - Tom Toison</title>
+
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/responsive.css" />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -37,7 +38,6 @@
         aria-label="Retour à l’accueil"
         >TT</a
       >
-
       <nav>
         <ul class="nav-links">
           <li><a href="bts.html" class="nav-link">BTS</a></li>
@@ -58,7 +58,7 @@
           <i class="fab fa-github"></i>
         </a>
         <a
-          href="https://www.linkedin.com/in/TON_ID_LINKEDIN"
+          href="https://www.linkedin.com/in/tom-toison-624573306/"
           target="_blank"
           aria-label="LinkedIn"
         >
@@ -68,25 +68,80 @@
     </header>
 
     <main class="page-section">
-      <h1>Tableau de Synthèse</h1>
+      <h1 class="section-title">Tableau de Synthèse</h1>
       <p class="section-description">
-        Voici le tableau récapitulatif des compétences que j’ai développées
-        durant ma formation BTS SIO option SLAM. Ce tableau fait le lien entre
-        les compétences du référentiel et les projets réalisés.
+        Voici le tableau récapitulatif des compétences développées durant ma
+        formation BTS SIO option SLAM. Téléchargez-le ou consultez-le
+        directement ci-dessous.
       </p>
 
       <div class="cta-section">
-        <a href="../assets/tableau-synthese.pdf" class="btn-primary" download>
+        <a href="../assets/TableauDeSynthese.pdf" class="btn-primary" download>
           <i class="fas fa-table"></i> Télécharger le tableau de synthèse
         </a>
       </div>
 
+      <section class="pdf-preview">
+        <h2>Prévisualisation - Tableau de Synthèse</h2>
+        <object
+          data="../assets/TableauDeSynthese.pdf"
+          type="application/pdf"
+          width="100%"
+          height="600px"
+        >
+          <p>
+            Votre navigateur ne peut pas afficher le PDF.
+            <a href="../assets/TableauDeSynthese.pdf" download>
+              Télécharger le tableau de synthèse
+            </a>
+          </p>
+        </object>
+      </section>
+
       <div class="cta-section second-cta">
-        <a href="../assets/cv.pdf" class="btn-secondary" download>
+        <a href="../assets/cvTomToison.pdf" class="btn-secondary" download>
           <i class="fas fa-file-pdf"></i> Télécharger mon CV
         </a>
       </div>
+
+      <section class="pdf-preview">
+        <h2>Prévisualisation - Mon CV</h2>
+        <object
+          data="../assets/cvTomToison.pdf"
+          type="application/pdf"
+          width="100%"
+          height="600px"
+        >
+          <p>
+            Votre navigateur ne peut pas afficher le PDF.
+            <a href="../assets/cvTomToison.pdf" download>
+              Télécharger mon CV
+            </a>
+          </p>
+        </object>
+      </section>
     </main>
+
+    <footer>
+      <p>© 2025 Tom Toison. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a
+          href="https://github.com/PapayaCalanK"
+          target="_blank"
+          aria-label="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/tom-toison-624573306/"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </footer>
+
     <script src="../js/script.js"></script>
   </body>
 </html>
