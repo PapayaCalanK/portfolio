@@ -6,12 +6,12 @@
     <title>Entreprise – La Galiote Prenant</title>
     <meta
       name="description"
-      content="Organigramme et projets réalisés chez La Galiote Prenant."
+      content="Présentation de La Galiote Prenant, organigramme et projets réalisés en entreprise."
     />
     <meta property="og:title" content="Entreprise – La Galiote Prenant" />
     <meta
       property="og:description"
-      content="Présentation de l'entreprise, organigramme et réalisations."
+      content="Organigramme de l'entreprise et réalisations de projets en entreprise."
     />
     <meta property="og:type" content="website" />
 
@@ -23,6 +23,7 @@
     />
   </head>
   <body>
+    <!-- HEADER -->
     <header class="navbar">
       <a href="../index.html" class="logo" aria-label="Accueil">TT</a>
       <nav>
@@ -39,6 +40,22 @@
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
+      <div class="social-links">
+        <a
+          href="https://github.com/PapayaCalanK"
+          target="_blank"
+          aria-label="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/tom-toison-624573306/"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
     </header>
 
     <main class="page-section">
@@ -46,7 +63,9 @@
       <section id="presentation" class="info-block">
         <h1 class="section-title">Présentation de La Galiote Prenant</h1>
         <p class="section-description">
-          <!-- Brève description de l'entreprise -->
+          La Galiote Prenant est spécialisée dans la gestion de flux
+          documentaires et informatiques pour les industries graphiques. Elle
+          offre des solutions de GPAO, de reporting et de maintenance de parc.
         </p>
       </section>
 
@@ -59,42 +78,129 @@
             alt="Organigramme de La Galiote Prenant"
             class="organigramme-img"
           />
-          <figcaption>Schéma de l’organigramme</figcaption>
+          <figcaption>Schéma de l’organigramme de l’entreprise</figcaption>
         </figure>
       </section>
 
       <!-- Projets réalisés en entreprise -->
       <section id="projets-entreprise" class="projects-section">
         <h2 class="section-title">Projets réalisés en entreprise</h2>
-        <p class="section-description">
-          Parcourez les captures de mes réalisations principales sous forme de
-          carrousel.
-        </p>
 
-        <div class="carousel-container">
-          <div class="carousel-slide">
-            <!-- Remplacez les src par vos images de projet -->
-            <img
-              src="../assets/projet-stock-1.png"
-              alt="Site de gestion de stock"
-            />
-            <img src="../assets/projet-gpao-1.png" alt="Formation GPAO" />
-            <img
-              src="../assets/projet-mail-1.png"
-              alt="Logiciel de tri des e-mails"
-            />
-            <img
-              src="../assets/projet-maintenance-1.png"
-              alt="Maintenance du parc informatique"
-            />
-            <img src="../assets/projet-planning-1.png" alt="Planning qualité" />
+        <!-- Projet 1 -->
+        <div class="project-card">
+          <h3>1. Site de gestion de stock</h3>
+          <ul class="info-list">
+            <li>Technos : TypeScript, React, Node.js</li>
+            <li>Base de données : PostgreSQL</li>
+            <li>
+              Fonctionnalités : suivi du stock, calcul des coûts en cartouches
+              d'encre
+            </li>
+          </ul>
+          <!-- Carousel horizontal dédié -->
+          <div class="carousel-container">
+            <div class="carousel-slide">
+              <img
+                src="../assets/projet-stock-1.png"
+                alt="Gestion de stock - vue 1"
+              />
+              <img
+                src="../assets/projet-stock-2.png"
+                alt="Gestion de stock - vue 2"
+              />
+            </div>
+            <button class="carousel-btn prev">❮</button>
+            <button class="carousel-btn next">❯</button>
           </div>
-          <button class="carousel-btn prev">❮</button>
-          <button class="carousel-btn next">❯</button>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="project-card">
+          <h3>2. Formation à la GPAO et suivi</h3>
+          <ul class="info-list">
+            <li>Mise en place du matériel (écrans, fanless, réseau)</li>
+            <li>Formation des opérateurs et chefs d'équipes</li>
+            <li>Relevé et correction de bogues (WinDev)</li>
+            <li>Supervision du bon fonctionnement</li>
+          </ul>
+          <div class="carousel-container">
+            <div class="carousel-slide">
+              <img src="../assets/projet-gpao-1.png" alt="GPAO - vue 1" />
+              <img src="../assets/projet-gpao-2.png" alt="GPAO - vue 2" />
+            </div>
+            <button class="carousel-btn prev">❮</button>
+            <button class="carousel-btn next">❯</button>
+          </div>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="project-card">
+          <h3>3. Logiciel de tri des e-mails</h3>
+          <ul class="info-list">
+            <li>Développé en WinDev</li>
+            <li>Tri automatique des e-mails clients</li>
+            <li>Envoi ciblé pour le service pré-presse</li>
+          </ul>
+          <div class="carousel-container">
+            <div class="carousel-slide">
+              <img src="../assets/projet-mail-1.png" alt="Tri mail - vue 1" />
+              <img src="../assets/projet-mail-2.png" alt="Tri mail - vue 2" />
+            </div>
+            <button class="carousel-btn prev">❮</button>
+            <button class="carousel-btn next">❯</button>
+          </div>
+        </div>
+
+        <!-- Projet 4 -->
+        <div class="project-card">
+          <h3>4. Maintenance du parc informatique</h3>
+          <ul class="info-list">
+            <li>Remplacement du matériel obsolète</li>
+            <li>Obtention des certificats de destruction (RSE)</li>
+          </ul>
+          <div class="carousel-container">
+            <div class="carousel-slide">
+              <img
+                src="../assets/projet-maintenance-1.png"
+                alt="Maintenance - vue 1"
+              />
+              <img
+                src="../assets/projet-maintenance-2.png"
+                alt="Maintenance - vue 2"
+              />
+            </div>
+            <button class="carousel-btn prev">❮</button>
+            <button class="carousel-btn next">❯</button>
+          </div>
+        </div>
+
+        <!-- Projet 5 -->
+        <div class="project-card">
+          <h3>5. Planning des dossiers pour le contrôle qualité</h3>
+          <ul class="info-list">
+            <li>Développé en WinDev</li>
+            <li>Tri et affichage des dossiers par date</li>
+            <li>Archivage automatisé</li>
+          </ul>
+          <div class="carousel-container">
+            <div class="carousel-slide">
+              <img
+                src="../assets/projet-planning-1.png"
+                alt="Planning - vue 1"
+              />
+              <img
+                src="../assets/projet-planning-2.png"
+                alt="Planning - vue 2"
+              />
+            </div>
+            <button class="carousel-btn prev">❮</button>
+            <button class="carousel-btn next">❯</button>
+          </div>
         </div>
       </section>
     </main>
 
+    <!-- FOOTER -->
     <footer>
       <p>© 2025 Tom Toison. Tous droits réservés.</p>
       <div class="footer-links">
