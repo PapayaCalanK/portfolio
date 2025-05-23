@@ -1,4 +1,4 @@
-// script.js: navigation dynamique + hero typing effect
+// js/script.js: navigation dynamique, typing effect et carrousel
 
 document.addEventListener("DOMContentLoaded", () => {
   // === Dynamic page loading ===
@@ -8,9 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (homeLink && contentArea) {
     async function loadContent(pagePath) {
-      if (!contentArea) return;
       try {
-        const response = await fetch(pagePath + ".html");
+        const response = await fetch(`${pagePath}.html`);
         if (!response.ok) throw new Error("Échec du chargement de la page");
         const content = await response.text();
         contentArea.innerHTML = content;
@@ -42,38 +41,57 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // === Hero typing effect ===
   const typedText = document.getElementById("typed-text");
-  if (!typedText) return;
-
-  const roles = [
-    "Développeur Full Stack",
-    "Passionné par les nouvelles technologies",
-    "Créateur de solutions web sur mesure"
-  ];
-  let roleIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-
-  function typeEffect() {
-    const current = roles[roleIndex];
-    if (isDeleting) {
-      typedText!.textContent = current.substring(0, charIndex - 1);
-      charIndex--;
-    } else {
-      typedText!.textContent = current.substring(0, charIndex + 1);
-      charIndex++;
-    }
-
-    let speed = isDeleting ? 40 : 90;
-    if (!isDeleting && charIndex === current.length) {
-      speed = 2000;
-      isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
+  if (typedText) {
+    const roles = [
+      "Développeur Full Stack",
+      "Passionné par les nouvelles technologies",
+      "Créateur de solutions web sur mesure",
+    ];
+    let roleIndex = 0,
+      charIndex = 0,
       isDeleting = false;
-      roleIndex = (roleIndex + 1) % roles.length;
-      speed = 500;
+
+    function typeEffect() {
+      const current = roles[roleIndex];
+      if (isDeleting) {
+        typedText.textContent = current.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typedText.textContent = current.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let speed = isDeleting ? 40 : 90;
+      if (!isDeleting && charIndex === current.length) {
+        speed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        speed = 500;
+      }
+      setTimeout(typeEffect, speed);
     }
-    setTimeout(typeEffect, speed);
+    typeEffect();
   }
 
-  typeEffect();
+  // === Carousel projects ===
+  document.querySelectorAll(".carousel-container").forEach((container) => {
+    const slide = container.querySelector(".carousel-slide");
+    const imgs = slide.querySelectorAll("img");
+    const prev = container.querySelector(".carousel-btn.prev");
+    const next = container.querySelector(".carousel-btn.next");
+    let index = 0;
+
+    function show(i) {
+      index = (i + imgs.length) % imgs.length;
+      slide.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    prev.addEventListener("click", () => show(index - 1));
+    next.addEventListener("click", () => show(index + 1));
+
+    // Affiche la première image au chargement
+    show(0);
+  });
 });
