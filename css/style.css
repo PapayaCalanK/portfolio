@@ -180,3 +180,22 @@ footer {
 .second-cta {
   margin-top: 1rem;
 }
+
+/* ===== CARROUSEL – vue une image à la fois ===== */
+.carousel-container {
+  position: relative;
+  max-width: 400px; /* largeur fixe pour le carrousel */
+  margin: 1.5rem auto;
+  overflow: hidden; /* cache toutes les autres images */
+}
+
+.carousel-slide {
+  display: flex; /* aligne horizontalement */
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+  min-width: 100%; /* chaque image occupe 100% du conteneur */
+  max-height: 250px; /* limite la hauteur */
+  object-fit: contain; /* garde les proportions */
+}
