@@ -24,24 +24,19 @@
   </head>
   <body>
     <header class="navbar">
-      <a
-        href="../index.html"
-        class="logo"
-        id="home-link"
-        aria-label="Retour à l’accueil"
-        >TT</a
-      >
-
+      <a href="../index.html" class="logo" aria-label="Accueil">TT</a>
       <nav>
         <ul class="nav-links">
           <li><a href="bts.html" class="nav-link">BTS</a></li>
           <li><a href="ppe.html" class="nav-link">PPE</a></li>
           <li><a href="projets.html" class="nav-link">Projets</a></li>
-          <li><a href="entreprise.html" class="nav-link">Entreprise</a></li>
+          <li>
+            <a href="entreprise.html" class="nav-link active">Entreprise</a>
+          </li>
           <li><a href="veille.html" class="nav-link">Veille</a></li>
           <li><a href="patrimoine.html" class="nav-link">Patrimoine</a></li>
           <li><a href="synthese.html" class="nav-link">Synthèse</a></li>
-          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -71,83 +66,31 @@
       <!-- Projets réalisés en entreprise -->
       <section id="projets-entreprise" class="projects-section">
         <h2 class="section-title">Projets réalisés en entreprise</h2>
+        <p class="section-description">
+          Parcourez les captures de mes réalisations principales sous forme de
+          carrousel.
+        </p>
 
-        <!-- Projet 1 -->
-        <div class="project-card">
-          <img
-            src="../assets/projet-stock.png"
-            alt="Gestion de stock"
-            class="project-img"
-          />
-          <h3>Gestion de stock</h3>
-          <p>Technos : TypeScript, React, Node.js</p>
-          <ul>
-            <li>Bases de données : PostgreSQL</li>
-            <li>
-              Fonctionnalités : suivi de stock, calcul des coûts en cartouches
-              d'encre
-            </li>
-          </ul>
-        </div>
-
-        <!-- Projet 2 -->
-        <div class="project-card">
-          <img
-            src="../assets/projet-gpao.png"
-            alt="Formation GPAO"
-            class="project-img"
-          />
-          <h3>Formation à la GPAO & suivi</h3>
-          <ul>
-            <li>Mise en place matériel : écrans, réseau, fanless</li>
-            <li>Formation des opérateurs et chefs d'équipes</li>
-            <li>Relevé et correction de bogues avec supervision Windev</li>
-          </ul>
-        </div>
-
-        <!-- Projet 3 -->
-        <div class="project-card">
-          <img
-            src="../assets/projet-mail.png"
-            alt="Logiciel de tri des e-mails"
-            class="project-img"
-          />
-          <h3>Logiciel de tri des e-mails</h3>
-          <p>Technos : WinDev</p>
-          <ul>
-            <li>Tri des mails pour le service pré-presse</li>
-            <li>Envoi automatique aux services concernés</li>
-          </ul>
-        </div>
-
-        <!-- Projet 4 -->
-        <div class="project-card">
-          <img
-            src="../assets/projet-maintenance.png"
-            alt="Maintenance du parc"
-            class="project-img"
-          />
-          <h3>Administration & maintenance du parc</h3>
-          <ul>
-            <li>Remplacement du matériel obsolète</li>
-            <li>Gestion RSE & certificat de destruction</li>
-          </ul>
-        </div>
-
-        <!-- Projet 5 -->
-        <div class="project-card">
-          <img
-            src="../assets/projet-planning.png"
-            alt="Planning qualité"
-            class="project-img"
-          />
-          <h3>Planning de contrôle qualité</h3>
-          <p>Technos : WinDev</p>
-          <ul>
-            <li>Tri des dossiers par date</li>
-            <li>Affichage des informations essentielles de suivi</li>
-            <li>Archivage automatisé</li>
-          </ul>
+        <div class="carousel-container">
+          <div class="carousel-slide">
+            <!-- Remplacez les src par vos images de projet -->
+            <img
+              src="../assets/projet-stock-1.png"
+              alt="Site de gestion de stock"
+            />
+            <img src="../assets/projet-gpao-1.png" alt="Formation GPAO" />
+            <img
+              src="../assets/projet-mail-1.png"
+              alt="Logiciel de tri des e-mails"
+            />
+            <img
+              src="../assets/projet-maintenance-1.png"
+              alt="Maintenance du parc informatique"
+            />
+            <img src="../assets/projet-planning-1.png" alt="Planning qualité" />
+          </div>
+          <button class="carousel-btn prev">❮</button>
+          <button class="carousel-btn next">❯</button>
         </div>
       </section>
     </main>
