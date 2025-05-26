@@ -1,4 +1,4 @@
-// js/script.js: typing effect & Swiper initialization only for entreprise page
+// js/script.js: typing effect & manual carousel initialization
 
 document.addEventListener("DOMContentLoaded", () => {
   // === Hero typing effect ===
@@ -14,13 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
       isDeleting = false;
     function typeEffect() {
       const current = roles[roleIndex];
-      if (isDeleting) {
-        typedText.textContent = current.substring(0, charIndex - 1);
-        charIndex--;
-      } else {
-        typedText.textContent = current.substring(0, charIndex + 1);
-        charIndex++;
-      }
+      typedText.textContent = isDeleting
+        ? current.substring(0, charIndex - 1)
+        : current.substring(0, charIndex + 1);
+      charIndex += isDeleting ? -1 : 1;
       let speed = isDeleting ? 40 : 90;
       if (!isDeleting && charIndex === current.length) {
         speed = 2000;
@@ -35,22 +32,35 @@ document.addEventListener("DOMContentLoaded", () => {
     typeEffect();
   }
 
-  // === Swiper Initialization ===
-  if (typeof Swiper !== "undefined") {
-    document.querySelectorAll(".swiper").forEach((container) => {
-      new Swiper(container, {
-        direction: "horizontal",
-        loop: true,
-        autoplay: { delay: 4000 },
-        pagination: {
-          el: container.querySelector(".swiper-pagination"),
-          clickable: true,
-        },
-        navigation: {
-          nextEl: container.querySelector(".swiper-button-next"),
-          prevEl: container.querySelector(".swiper-button-prev"),
-        },
-      });
+  // === Manual Carousel Initialization ===
+  document.querySelectorAll(".carousel-container").forEach((container) => {
+    const slide = container.querySelector(".carousel-slide");
+    const items = Array.from(slide.children);
+    const prevBtn = container.querySelector(".carousel-btn.prev");
+    const nextBtn = container.querySelector(".carousel-btn.next");
+    let index = 0;
+
+    // Set initial styles
+    slide.style.display = "flex";
+    slide.style.transition = "transform 0.5s ease-in-out";
+    items.forEach((item) => {
+      item.style.minWidth = "100%";
     });
-  }
+
+    function update() {
+      slide.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    prevBtn.addEventListener("click", () => {
+      index = (index - 1 + items.length) % items.length;
+      update();
+    });
+    nextBtn.addEventListener("click", () => {
+      index = (index + 1) % items.length;
+      update();
+    });
+
+    // Initialize
+    update();
+  });
 });
