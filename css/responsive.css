@@ -1,15 +1,102 @@
 /* ======== RESPONSIVE ======== */
+
+@media (max-width: 1024px) {
+  .carousel-slide div {
+    min-width: 250px;
+  }
+
+  .project-card,
+  .info-block {
+    padding: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
+  /* Texte d’accueil */
   .hero-text h1 {
     font-size: 2.2rem;
   }
 
-  .hero-buttons {
-    flex-direction: column;
+  .hero-text p {
+    font-size: 1rem;
   }
 
+  /* Boutons en colonne */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  /* Navigation verticale */
   .navbar {
     flex-direction: column;
     gap: 1rem;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Sections générales */
+  .page-section {
+    padding: 3rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  /* Cartes projets */
+  .project-card,
+  .info-block {
+    padding: 1.2rem;
+  }
+
+  .info-list li {
+    font-size: 0.95rem;
+  }
+
+  /* Carrousel */
+  .carousel-slide div {
+    min-width: 90%;
+  }
+
+  .carousel-btn {
+    font-size: 1.2rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.8rem;
+    padding: 1.5rem;
+  }
+
+  .footer-links a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .carousel-slide div {
+    min-width: 100%;
+  }
+
+  .carousel-btn.prev {
+    left: 5px;
+  }
+
+  .carousel-btn.next {
+    right: 5px;
   }
 }

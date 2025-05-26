@@ -20,6 +20,7 @@ body {
   line-height: 1.6;
 }
 
+/* ======== TITRES ET TEXTES ======== */
 h1,
 h2,
 h3 {
@@ -145,23 +146,45 @@ p {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
 }
 
-.project-card h2 {
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card h2,
+.project-card h3 {
   margin-top: 0;
+  font-size: 1.6rem;
 }
 
-.tech-list {
-  list-style: disc;
+/* ======== LISTES ======== */
+.info-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.info-list li {
+  margin-bottom: 0.6rem;
   padding-left: 1.5rem;
-  color: var(--text-light);
+  position: relative;
+  font-size: 1rem;
+  color: var(--text);
 }
 
-.project-links {
-  margin-top: 1rem;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+.info-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
 }
 
 /* ======== FOOTER ======== */
@@ -172,7 +195,77 @@ footer {
   color: var(--text-light);
 }
 
-/* Styles spécifiques */
+.footer-links a {
+  margin: 0 0.5rem;
+  color: var(--text-light);
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+/* ======== CARROUSEL ======== */
+.carousel-container {
+  position: relative;
+  margin: 1.5rem auto;
+  overflow: hidden;
+  border-radius: var(--radius);
+  max-width: 100%;
+}
+
+.carousel-slide {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+}
+
+.carousel-slide div {
+  flex: 0 0 auto;
+  min-width: 300px;
+  scroll-snap-align: center;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Boutons du carrousel */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* ======== FORMULAIRES, SECTIONS SPÉCIALES ======== */
 .contact-container p {
   margin-bottom: 2rem;
 }
@@ -181,28 +274,12 @@ footer {
   margin-top: 1rem;
 }
 
-/* ===== CARROUSEL – vue une image à la fois ===== */
-.carousel-container {
-  position: relative;
-  max-width: 400px; /* largeur fixe pour le carrousel */
-  margin: 1.5rem auto;
-  overflow: hidden; /* cache toutes les autres images */
-}
-
-.carousel-slide {
-  display: flex; /* aligne horizontalement */
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-slide img {
-  min-width: 100%; /* chaque image occupe 100% du conteneur */
-  max-height: 250px; /* limite la hauteur */
-  object-fit: contain; /* garde les proportions */
-}
+/* Swiper (non utilisé mais conservé) */
 .swiper {
-  width: 500px; /* la largeur que tu souhaites */
+  width: 500px;
   margin: 2rem auto;
 }
+
 .swiper-slide img {
   width: 100%;
   height: auto;
