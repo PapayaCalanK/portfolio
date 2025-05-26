@@ -209,7 +209,7 @@ footer {
 /* ======== CARROUSEL ======== */
 .carousel-container {
   position: relative;
-  max-width: 700px;
+  max-width: 900px; /* Largeur confortable */
   margin: 2rem auto;
   overflow: hidden;
   border-radius: var(--radius);
@@ -229,10 +229,11 @@ footer {
 .carousel-slide img {
   display: block;
   width: 100%;
+  max-height: 550px; /* Plus grand que l'organigramme */
   height: auto;
-  max-height: 400px;
   object-fit: contain;
   border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Boutons du carrousel */
