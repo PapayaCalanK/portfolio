@@ -1,41 +1,39 @@
-// js/script.js: navigation dynamique, typing effect et carrousel
+// js/script.js: navigation dynamique, typing effect et Swiper init
 
 document.addEventListener("DOMContentLoaded", () => {
+  // === Swiper initialization ===
+  function initSwipers() {
+    document.querySelectorAll(".swiper").forEach((container) => {
+      // destroy old instance if exists
+      if (container.swiper) {
+        container.swiper.destroy(true, true);
+      }
+      // initialize new Swiper
+      new Swiper(container, {
+        direction: "horizontal",
+        loop: true,
+        autoplay: { delay: 4000 },
+        pagination: { el: container.querySelector(".swiper-pagination") },
+        navigation: {
+          nextEl: container.querySelector(".swiper-button-next"),
+          prevEl: container.querySelector(".swiper-button-prev"),
+        },
+      });
+    });
+  }
+
   // === Dynamic page loading ===
   const navLinks = document.querySelectorAll(".nav-link");
   const homeLink = document.getElementById("home-link");
   const contentArea = document.querySelector(".content-area");
 
-  // Fonction pour initialiser les carrousels
-  function initCarousels() {
-    document.querySelectorAll(".carousel-container").forEach((container) => {
-      const slide = container.querySelector(".carousel-slide");
-      const imgs = slide.querySelectorAll("img");
-      const prev = container.querySelector(".carousel-btn.prev");
-      const next = container.querySelector(".carousel-btn.next");
-      let index = 0;
-
-      function show(i) {
-        index = (i + imgs.length) % imgs.length;
-        slide.style.transform = `translateX(-${index * 100}%)`;
-      }
-
-      prev.addEventListener("click", () => show(index - 1));
-      next.addEventListener("click", () => show(index + 1));
-
-      // Affiche la première image au chargement
-      show(0);
-    });
-  }
-
-  // Chargement dynamique des pages
   async function loadContent(pagePath) {
     if (!contentArea) return;
     try {
       const response = await fetch(`${pagePath}.html`);
       if (!response.ok) throw new Error("Échec du chargement de la page");
       contentArea.innerHTML = await response.text();
-      initCarousels(); // initialise les carrousels après injection
+      initSwipers(); // ré-initialise Swiper après injection
     } catch (error) {
       console.error("Erreur de chargement :", error);
       contentArea.innerHTML = "<p>Erreur lors du chargement de la page.</p>";
@@ -59,8 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
       navLinks.forEach((l) => l.classList.remove("active"));
     });
 
-    // Charge la page d'accueil et initialise les carrousels
-    loadContent("pages/accueil").then(initCarousels);
+    // charge l'accueil et initialise Swiper la première fois
+    loadContent("pages/accueil");
   }
 
   // === Hero typing effect ===
@@ -85,7 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
         typedText.textContent = current.substring(0, charIndex + 1);
         charIndex++;
       }
-
       let speed = isDeleting ? 40 : 90;
       if (!isDeleting && charIndex === current.length) {
         speed = 2000;
@@ -99,4 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     typeEffect();
   })();
+
+  // initialise Swiper sur la page statique initiale
+  initSwipers();
 });
