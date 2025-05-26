@@ -199,3 +199,12 @@ footer {
   max-height: 250px; /* limite la hauteur */
   object-fit: contain; /* garde les proportions */
 }
+.swiper {
+  width: 500px; /* la largeur que tu souhaites */
+  margin: 2rem auto;
+}
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
