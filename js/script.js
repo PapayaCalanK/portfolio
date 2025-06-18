@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // === Manual Carousel Initialization ===
   document.querySelectorAll(".carousel-container").forEach((container) => {
     const slide = container.querySelector(".carousel-slide");
+    if (!slide) return; // ← saute les carrousels sans slide (ex. projet 4)
     const items = Array.from(slide.children);
     const prevBtn = container.querySelector(".carousel-btn.prev");
     const nextBtn = container.querySelector(".carousel-btn.next");
