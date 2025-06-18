@@ -65,6 +65,15 @@ p {
   color: var(--primary);
 }
 
+/* ======== LOGO IMAGE ======== */
+.logo img,
+.logo-img {
+  height: 0.5rem; /* ajuste ce value pour qu’il corresponde exactement à la hauteur de ton TT (ex. 1.2rem, 1.6rem) */
+  width: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
 /* ======== HERO SECTION ======== */
 .hero-section {
   padding: 5rem 2rem;
@@ -290,13 +299,4 @@ footer {
 }
 .hidden {
   display: none;
-}
-
-/* Logo image en-tête */
-.logo img {
-  /* On utilise 1em (= taille de police du parent, ici .logo) */
-  height: 1em;
-  width: auto; /* pour garder les proportions */
-  vertical-align: middle; /* pour centrer dans la ligne */
-  display: inline-block; /* facultatif, mais safe */
 }
