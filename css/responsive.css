@@ -4,6 +4,7 @@
 @media (max-width: 768px) {
   /* ===== Header ===== */
   .navbar {
+    position: static;
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
