@@ -1,3 +1,4 @@
+projets.html : ``
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -14,10 +15,9 @@
     />
     <meta property="og:image" content="assets/preview.png" />
     <meta property="og:type" content="website" />
-    <title>Projets - Tom Toison</title>
+    <title>Projets PPE - Tom Toison</title>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/responsive.css" />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -42,10 +42,12 @@
       <nav>
         <ul class="nav-links">
           <li><a href="evernex.html" class="nav-link">EVERNEX</a></li>
-          <li><a href="competences.html" class="nav-link">Compétences</a></li>
+          <li>
+            <a href="competences.html" class="nav-link active">Compétences</a>
+          </li>
           <li><a href="scolarite.html" class="nav-link">Scolarité</a></li>
           <li><a href="entreprise.html" class="nav-link">Entreprise</a></li>
-          <li><a href="projets.html" class="nav-link active">Projets</a></li>
+          <li><a href="projets.html" class="nav-link">Projets</a></li>
           <li>
             <a href="certifications.html" class="nav-link">Certifications</a>
           </li>
@@ -74,45 +76,24 @@
 
     <!-- CONTENU PRINCIPAL -->
     <main class="page-section">
-      <h1 class="section-title">Mes Projets de Formation</h1>
+      <h1 class="section-title">Projets Personnalisés Encadrés (PPE)</h1>
       <p class="section-description">
-        Découvrez mes réalisations développées dans le cadre du BTS SIO,
-        incluant des applications web, clients lourds et des projets
-        professionnels concrets.
+        Voici un aperçu de mes projets réalisés dans le cadre du BTS SIO SLAM,
+        mettant en pratique mes compétences en développement web, logiciel et
+        gestion de base de données.
       </p>
 
+      <!-- PPE 1 -->
       <div class="info-block">
-        <h2>Application Client Lourd</h2>
-        <p>
-          Développement d'une application de gestion interne en C# Windows Forms
-          avec :
-        </p>
+        <h2>PPE 1 : Site e-commerce "GameTechPro" (PHP / MySQL)</h2>
+        <p>Développement d'un site e-commerce complet avec :</p>
         <ul class="info-list">
-          <li>Interface utilisateur graphique</li>
-          <li>Gestion CRUD des ressources</li>
-          <li>Connexion à une base de données locale</li>
-        </ul>
-        <div class="project-links">
-          <a
-            href="https://github.com/PapayaCalanK/GestionMatos"
-            target="_blank"
-            class="btn-primary"
-          >
-            <i class="fab fa-github"></i> Voir sur GitHub
-          </a>
-        </div>
-      </div>
-
-      <div class="info-block">
-        <h2>Application Web PHP / MySQL</h2>
-        <p>
-          Création d’un site web complet avec base de données MySQL, système
-          d’authentification, et gestion d’un espace utilisateur.
-        </p>
-        <ul class="info-list">
-          <li>Front-end responsive</li>
-          <li>Système de connexion sécurisé</li>
-          <li>Back-end en PHP natif</li>
+          <li>Gestion des produits et panier</li>
+          <li>Inscription / connexion sécurisée (mot de passe haché)</li>
+          <li>Recherche AJAX et tri des articles par prix</li>
+          <li>Passage de commande avec simulation de paiement</li>
+          <li>Interface responsive et moderne (HTML / CSS / JS)</li>
+          <li>Base de données MySQL avec les tables produits et user</li>
         </ul>
         <div class="project-links">
           <a
@@ -122,30 +103,89 @@
           >
             <i class="fab fa-github"></i> Voir sur GitHub
           </a>
+          <button
+            class="btn-secondary"
+            onclick="toggleCarousel('ppe1-carousel')"
+          >
+            Voir la présentation
+          </button>
+        </div>
+
+        <div id="ppe1-carousel" class="carousel-container hidden">
+          >
+          <div class="carousel-slide">
+            <div>
+              <img src="../assets/GT.1.png" alt="Page accueil PPE1" />
+            </div>
+            <div><img src="../assets/GT.2.png" alt="Page panier PPE1" /></div>
+            <div>
+              <img src="../assets/GT.3.png" alt="Page tri PPE1" />
+            </div>
+            <div>
+              <img src="../assets/GT.4.png" alt="Page paiement PPE1" />
+            </div>
+          </div>
+          <button class="carousel-btn prev">❮</button>
+          <button class="carousel-btn next">❯</button>
+        </div>
+      </div>
+
+      <!-- PPE 2 -->
+      <div class="info-block">
+        <h2>PPE 2 : Application de gestion "HelpGeek" (C# / Windows Forms)</h2>
+        <p>Création d’une application locale de gestion avec :</p>
+        <ul class="info-list">
+          <li>
+            Gestion des utilisateurs, clients, produits, marques et
+            interventions
+          </li>
+          <li>Base de données SQL Server</li>
+          <li>
+            Fonctionnalités CRUD complètes (Ajouter, Modifier, Supprimer,
+            Consulter)
+          </li>
+          <li>
+            Authentification sécurisée avec vérification du login et mot de
+            passe
+          </li>
+          <li>Interface graphique claire avec menus dynamiques</li>
+          <li>Stockage de l’image des produits via chemin local</li>
+        </ul>
+        <div class="project-links">
+          <a
+            href="https://github.com/PapayaCalanK/GestionMatos"
+            target="_blank"
+            class="btn-primary"
+          >
+            <i class="fab fa-github"></i> Voir sur GitHub
+          </a>
+          <button
+            class="btn-secondary"
+            onclick="toggleCarousel('ppe2-carousel')"
+          >
+            Voir la présentation
+          </button>
+        </div>
+
+        <div id="ppe2-carousel" class="carousel-container hidden">
+          <div class="carousel-slide">
+            <div>
+              <img src="../assets/HG.1.png" alt="Fenêtre login PPE2" />
+            </div>
+            <div>
+              <img src="../assets/HG.2.png" alt="Formulaire client PPE2" />
+            </div>
+            <div>
+              <img src="../assets/HG.3.png" alt="Formulaire produit PPE2" />
+            </div>
+          </div>
+          <button class="carousel-btn prev">❮</button>
+          <button class="carousel-btn next">❯</button>
         </div>
       </div>
     </main>
 
-    <footer>
-      <p>© 2025 Tom Toison. Tous droits réservés.</p>
-      <div class="footer-links">
-        <a
-          href="https://github.com/PapayaCalanK"
-          target="_blank"
-          aria-label="GitHub"
-        >
-          <i class="fab fa-github"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/tom-toison-624573306/"
-          target="_blank"
-          aria-label="LinkedIn"
-        >
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </div>
-    </footer>
-
     <script src="../js/script.js"></script>
   </body>
 </html>
+``
