@@ -291,3 +291,12 @@ footer {
 .hidden {
   display: none;
 }
+
+/* Logo image en-tête */
+.logo img {
+  /* On utilise 1em (= taille de police du parent, ici .logo) */
+  height: 1em;
+  width: auto; /* pour garder les proportions */
+  vertical-align: middle; /* pour centrer dans la ligne */
+  display: inline-block; /* facultatif, mais safe */
+}
