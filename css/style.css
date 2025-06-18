@@ -68,7 +68,7 @@ p {
 /* ======== LOGO IMAGE ======== */
 .logo img,
 .logo-img {
-  height: 2rem; /* ajuste ce value pour qu’il corresponde exactement à la hauteur de ton TT (ex. 1.2rem, 1.6rem) */
+  height: 2em; /* ajuste ce value pour qu’il corresponde exactement à la hauteur de ton TT (ex. 1.2rem, 1.6rem) */
   width: auto;
   display: inline-block;
 }
