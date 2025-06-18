@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfolio de Tom Toison – BTS SIO SLAM, développeur Full-Stack. Projets de formation et en entreprise."
+      content="Portfolio de Tom Toison – BTS SIO SLAM, développeur Full-Stack. Projets, veille techno et contact."
     />
     <meta property="og:title" content="Portfolio – Tom Toison" />
     <meta
@@ -17,6 +17,7 @@
     <title>Projets - Tom Toison</title>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/responsive.css" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -28,6 +29,7 @@
   </head>
 
   <body>
+    <!-- HEADER -->
     <header class="navbar">
       <a
         href="../index.html"
@@ -36,11 +38,13 @@
         aria-label="Retour à l’accueil"
         >TT</a
       >
+
       <nav>
         <ul class="nav-links">
           <li><a href="evernex.html" class="nav-link">EVERNEX</a></li>
           <li><a href="competences.html" class="nav-link">Compétences</a></li>
           <li><a href="scolarite.html" class="nav-link">Scolarité</a></li>
+          <li><a href="entreprise.html" class="nav-link">Entreprise</a></li>
           <li><a href="projets.html" class="nav-link active">Projets</a></li>
           <li>
             <a href="certifications.html" class="nav-link">Certifications</a>
@@ -55,102 +59,71 @@
           href="https://github.com/PapayaCalanK"
           target="_blank"
           aria-label="GitHub"
-          ><i class="fab fa-github"></i
-        ></a>
+        >
+          <i class="fab fa-github"></i>
+        </a>
         <a
-          href="https://www.linkedin.com/in/tom-toison-624573306/"
+          href="https://www.linkedin.com/in/TON_ID_LINKEDIN"
           target="_blank"
           aria-label="LinkedIn"
-          ><i class="fab fa-linkedin"></i
-        ></a>
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
       </div>
     </header>
 
+    <!-- CONTENU PRINCIPAL -->
     <main class="page-section">
-      <h1 class="section-title">Mes Projets</h1>
+      <h1 class="section-title">Mes Projets de Formation</h1>
       <p class="section-description">
-        Voici un aperçu de mes réalisations dans le cadre de ma formation et de
-        mes missions en entreprise.
+        Découvrez mes réalisations développées dans le cadre du BTS SIO,
+        incluant des applications web, clients lourds et des projets
+        professionnels concrets.
       </p>
 
-      <!-- Projets de formation -->
-      <section class="info-block">
-        <h2>Applications réalisées en formation</h2>
-
-        <div class="info-block">
-          <h3>Application Client Lourd</h3>
-          <p>
-            Développement d'une application de gestion interne en C# Windows
-            Forms :
-          </p>
-          <ul class="info-list">
-            <li>Interface utilisateur graphique</li>
-            <li>Gestion CRUD des ressources</li>
-            <li>Connexion à une base de données locale</li>
-          </ul>
-          <div class="project-links">
-            <a
-              href="https://github.com/PapayaCalanK/GestionMatos"
-              target="_blank"
-              class="btn-primary"
-            >
-              <i class="fab fa-github"></i> Voir sur GitHub
-            </a>
-          </div>
-        </div>
-
-        <div class="info-block">
-          <h3>Application Web PHP / MySQL</h3>
-          <p>
-            Création d’un site web avec base de données, authentification, et
-            interface utilisateur complète :
-          </p>
-          <ul class="info-list">
-            <li>Front-end responsive</li>
-            <li>Système de connexion sécurisé</li>
-            <li>Back-end en PHP natif</li>
-          </ul>
-          <div class="project-links">
-            <a
-              href="https://github.com/PapayaCalanK/GameTechPro"
-              target="_blank"
-              class="btn-primary"
-            >
-              <i class="fab fa-github"></i> Voir sur GitHub
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projets en entreprise -->
-      <section class="info-block">
-        <h2>Projets réalisés en entreprise</h2>
+      <div class="info-block">
+        <h2>Application Client Lourd</h2>
         <p>
-          Développements effectués lors de mon alternance à La Galiote Prenant :
+          Développement d'une application de gestion interne en C# Windows Forms
+          avec :
         </p>
-
         <ul class="info-list">
-          <li>
-            <strong>Site de gestion de stock</strong> – React, TypeScript,
-            Node.js, PostgreSQL
-          </li>
-          <li><strong>Logiciel de tri des e-mails</strong> – WinDev</li>
-          <li>
-            <strong>Site de monitoring machine</strong> – React, JavaScript
-          </li>
-          <li>
-            <strong>Formation et maintenance GPAO</strong> – Déploiement de
-            matériel et formation
-          </li>
-          <li>
-            <strong>Logiciel de planification des dossiers</strong> – WinDev
-          </li>
-          <li>
-            <strong>Remplacement matériel et RSE</strong> – Gestion du cycle de
-            vie du parc informatique
-          </li>
+          <li>Interface utilisateur graphique</li>
+          <li>Gestion CRUD des ressources</li>
+          <li>Connexion à une base de données locale</li>
         </ul>
-      </section>
+        <div class="project-links">
+          <a
+            href="https://github.com/PapayaCalanK/GestionMatos"
+            target="_blank"
+            class="btn-primary"
+          >
+            <i class="fab fa-github"></i> Voir sur GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <h2>Application Web PHP / MySQL</h2>
+        <p>
+          Création d’un site web complet avec base de données MySQL, système
+          d’authentification, et gestion d’un espace utilisateur.
+        </p>
+        <ul class="info-list">
+          <li>Front-end responsive</li>
+          <li>Système de connexion sécurisé</li>
+          <li>Back-end en PHP natif</li>
+        </ul>
+        <div class="project-links">
+          <a
+            href="https://github.com/PapayaCalanK/GameTechPro"
+            target="_blank"
+            class="btn-primary"
+          >
+            <i class="fab fa-github"></i> Voir sur GitHub
+          </a>
+        </div>
+      </div>
     </main>
 
     <footer>
@@ -160,14 +133,16 @@
           href="https://github.com/PapayaCalanK"
           target="_blank"
           aria-label="GitHub"
-          ><i class="fab fa-github"></i
-        ></a>
+        >
+          <i class="fab fa-github"></i>
+        </a>
         <a
           href="https://www.linkedin.com/in/tom-toison-624573306/"
           target="_blank"
           aria-label="LinkedIn"
-          ><i class="fab fa-linkedin"></i
-        ></a>
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
       </div>
     </footer>
 
