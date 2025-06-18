@@ -126,3 +126,18 @@
     gap: 0.25rem;
   }
 }
+.carousel-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Optional : si vous voulez un max-width plus petit sur mobile pour le projet 4 */
+@media (max-width: 768px) {
+  /* cible le 4ᵉ project-card, ou mieux ajoutez une classe spécifique à ce container */
+  .project-card:nth-of-type(4) .carousel-container img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
