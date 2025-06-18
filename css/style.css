@@ -70,7 +70,6 @@ p {
 .logo-img {
   height: 0.5rem; /* ajuste ce value pour qu’il corresponde exactement à la hauteur de ton TT (ex. 1.2rem, 1.6rem) */
   width: auto;
-  vertical-align: middle;
   display: inline-block;
 }
 
