@@ -2,35 +2,35 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   // === Hero typing effect ===
-  const typedText = document.getElementById("typed-text");
-  if (typedText) {
-    const roles = [
-      "Développeur Full Stack",
-      "Passionné par les nouvelles technologies",
-      "Créateur de solutions web sur mesure",
-    ];
-    let roleIndex = 0,
-      charIndex = 0,
-      isDeleting = false;
-    function typeEffect() {
-      const current = roles[roleIndex];
-      typedText.textContent = isDeleting
-        ? current.substring(0, charIndex - 1)
-        : current.substring(0, charIndex + 1);
-      charIndex += isDeleting ? -1 : 1;
-      let speed = isDeleting ? 40 : 90;
-      if (!isDeleting && charIndex === current.length) {
-        speed = 2000;
-        isDeleting = true;
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        roleIndex = (roleIndex + 1) % roles.length;
-        speed = 500;
-      }
-      setTimeout(typeEffect, speed);
-    }
-    typeEffect();
-  }
+  // const typedText = document.getElementById("typed-text");
+  // if (typedText) {
+  //   const roles = [
+  //     "Développeur Full Stack",
+  //     "Passionné par les nouvelles technologies",
+  //     "Créateur de solutions web sur mesure",
+  //   ];
+  //   let roleIndex = 0,
+  //     charIndex = 0,
+  //     isDeleting = false;
+  //   function typeEffect() {
+  //     const current = roles[roleIndex];
+  //     typedText.textContent = isDeleting
+  //       ? current.substring(0, charIndex - 1)
+  //       : current.substring(0, charIndex + 1);
+  //     charIndex += isDeleting ? -1 : 1;
+  //     let speed = isDeleting ? 40 : 90;
+  //     if (!isDeleting && charIndex === current.length) {
+  //       speed = 2000;
+  //       isDeleting = true;
+  //     } else if (isDeleting && charIndex === 0) {
+  //       isDeleting = false;
+  //       roleIndex = (roleIndex + 1) % roles.length;
+  //       speed = 500;
+  //     }
+  //     setTimeout(typeEffect, speed);
+  //   }
+  //   typeEffect();
+  // }
 
   // === Manual Carousel Initialization ===
   document.querySelectorAll(".carousel-container").forEach((container) => {
